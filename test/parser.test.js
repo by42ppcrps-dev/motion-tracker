@@ -9,3 +9,17 @@ test("finds motions and gaps", () => { const r = check(S); assert.equal(r.motion
 test("ready when complete", () => { const r = check("Dana Ruiz moved to buy salt. Seconded by Lee Park. Vote 6-0."); assert.equal(r.ready, true); assert.match(r.summary, /Vote 6-0-0. Carried/); });
 test("mover cannot second", () => { assert.ok(check("Moved by Dana Ruiz to x. Seconded by Dana Ruiz. 5-0").motions[0].gaps.length); });
 test("empty", () => { assert.equal(check("hello").ready, false); });
+test("multiline mover/seconder/result stay one motion", () => {
+  const notes = `Motion to approve the fence repair bid for $6,400.
+Moved by Dana Ruiz.
+Seconded by Lee Park.
+Vote 5-1-0, carried.`;
+  const r = check(notes);
+  assert.equal(r.motions.length, 1, "must not split on 'Moved by' line");
+  assert.equal(r.motions[0].mover, "Dana Ruiz");
+  assert.equal(r.motions[0].seconder, "Lee Park");
+  assert.equal(r.motions[0].vote.for, 5);
+  assert.equal(r.motions[0].result, "Carried");
+  assert.deepEqual(r.motions[0].gaps, []);
+  assert.equal(r.ready, true);
+});
