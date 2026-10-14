@@ -1,0 +1,37 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Motion Tracker</title><style>
+body{background:#faf6ec;color:#222;font:17px/1.5 system-ui,sans-serif;max-width:980px;margin:0 auto;padding:28px}
+h1,h2{font-family:Georgia,serif;font-weight:normal}h1{margin:0}p.sub{margin:.2em 0 1.4em;color:#555}
+textarea{width:100%;height:220px;font:15px/1.45 ui-monospace,monospace;padding:12px;border:1px solid #cbbf9f;background:#fffdf7;box-sizing:border-box}
+button{font:inherit;padding:9px 18px;border:1px solid #222;background:#222;color:#faf6ec;cursor:pointer;margin:10px 8px 0 0}button.alt{background:transparent;color:#222}
+button:disabled{opacity:.4;cursor:default}table{width:100%;border-collapse:collapse;margin-top:12px;background:#fffdf7}
+th,td{border-bottom:1px solid #e3d9c0;padding:8px;text-align:left;vertical-align:top}.gap{color:#b3261e;font-weight:600}.tip{color:#b3261e;font-size:14px}
+.banner{padding:12px 16px;margin-top:18px;border-left:6px solid}.ok{border-color:#1e7a3c;background:#e6f3ea}.no{border-color:#b3261e;background:#f9e7e5}
+footer{margin-top:40px;font-size:13px;color:#777}</style></head><body>
+<h1>Motion Tracker</h1><p class="sub">Paste your board meeting notes. See every motion, and what's missing before the minutes go out.</p>
+<label for="n">Meeting notes</label><textarea id="n" placeholder="e.g. Dana Ruiz moved to approve the fence repair bid. Seconded by Lee Park. Vote 5-1-1, carried."></textarea>
+<div><button id="go">Check motions</button><button class="alt" id="sample">Try sample notes</button><button class="alt" id="copy" disabled>Copy summary</button></div>
+<div id="out" aria-live="polite"></div>
+<footer>Nothing you paste is stored. Sample names are made up. MIT licensed · LumeGrid</footer>
+<script>
+const SAMPLE=`Cedar Court HOA board meeting, Oct 8 (sample)
+Call to order 7:02 PM. Quorum present (6 of 7).
+Motion to approve the September minutes. Moved by Dana Ruiz, seconded by Lee Park. Passed unanimously.
+Treasurer report: reserves at $48,200.
+Lee Park moved to accept the fence repair bid from Northside Fencing for $6,400.
+Discussion about second quote. Vote 5-1-0, carried.
+Motion by Priya Shah to raise the late fee to $25. Seconded by Omar Cole.
+Motion to adjourn. Seconded by Dana Ruiz. All in favor.`;
+let last;const $=id=>document.getElementById(id),esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+$("sample").onclick=()=>{$("n").value=SAMPLE;run()};$("go").onclick=run;
+$("copy").onclick=async()=>{await navigator.clipboard.writeText(last.summary);$("copy").textContent="Copied";setTimeout(()=>$("copy").textContent="Copy summary",1500)};
+async function run(){const r=await fetch("/api/check",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({notes:$("n").value})});
+const d=await r.json();if(d.error){$("out").innerHTML=`<div class="banner no">${esc(d.error)}</div>`;return}last=d;
+if(!d.motions.length){$("out").innerHTML=`<div class="banner no">No motions found. Lines with “motion” or “moved” start one.</div>`;$("copy").disabled=true;return}
+const n=d.motions.reduce((a,m)=>a+m.gaps.length,0);
+const cell=(m,f,v)=>m.gaps.some(g=>g.field===f)?`<span class="gap">missing</span>`:esc(v);
+const vt=v=>!v?null:v.unanimous?"unanimous":`${v.for}-${v.against}-${v.abstain}`;
+$("out").innerHTML=`<div class="banner ${d.ready?"ok":"no"}">${d.ready?"✓ Ready for minutes: every motion has a mover, seconder and vote.":`${n} thing${n>1?"s":""} missing across ${d.motions.length} motions. Fix the notes and check again.`}</div>
+<table><tr><th>#</th><th>Motion</th><th>Moved</th><th>Seconded</th><th>Vote</th><th>Result</th></tr>${d.motions.map((m,i)=>`<tr><td>${i+1}</td><td>${esc(m.text)}${m.gaps.map(g=>`<div class="tip">${esc(g.tip)}</div>`).join("")}</td><td>${cell(m,"mover",m.mover)}</td><td>${cell(m,"seconder",m.seconder)}</td><td>${cell(m,"vote",vt(m.vote))}</td><td>${esc(m.result??"")}</td></tr>`).join("")}</table>`;
+$("copy").disabled=!d.ready}
+</script></body></html>
