@@ -1,4 +1,5 @@
-const START = /\b(motion|moved|move to|moves to)\b/i;
+/** Parliamentary start patterns only — not bare "motion"/"moved" in ordinary English. */
+const START = /\b(?:motion\s+(?:to|by)|moved\s+by|(?:moved|moves|move)\s+to)\b/i;
 const NAME = "([A-Z][a-zA-Z'-]+(?:\\s[A-Z][a-zA-Z'-]+)?)";
 const ci = w => w.replace(/^([a-z])/, (c) => `[${c.toUpperCase()}${c}]`);
 const MOVER = [new RegExp(`${ci('moved')} by\\s+${NAME}`), new RegExp(`${ci('motion')} by\\s+${NAME}`), new RegExp(`${NAME}\\s+(?:moved|moves)\\b`), new RegExp(`mover:\\s*${NAME}`, "i")];
@@ -19,6 +20,7 @@ function result(s, v) {
 }
 /** Attribution-only "Moved by Name" continues the open motion; "Moved by Name to …" still starts one. */
 function isMotionStart(line, hasOpenBlock) {
+  if (/\bno\s+motions?\b/i.test(line)) return false;
   if (!START.test(line)) return false;
   if (hasOpenBlock && /^moved by\b/i.test(line) && !/\bto\s+\S/i.test(line)) return false;
   return true;
