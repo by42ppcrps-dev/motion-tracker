@@ -17,10 +17,19 @@ function result(s, v) {
   if (v && v.for != null) return v.for > v.against ? "Carried" : "Failed";
   return null;
 }
+/** Attribution-only "Moved by Name" continues the open motion; "Moved by Name to …" still starts one. */
+function isMotionStart(line, hasOpenBlock) {
+  if (!START.test(line)) return false;
+  if (hasOpenBlock && /^moved by\b/i.test(line) && !/\bto\s+\S/i.test(line)) return false;
+  return true;
+}
 export function parseMotions(text) {
   const lines = String(text).split(/\r?\n/).map(l => l.trim()).filter(Boolean);
   const blocks = [];
-  for (const l of lines) { if (START.test(l)) blocks.push([l]); else if (blocks.length) blocks[blocks.length - 1].push(l); }
+  for (const l of lines) {
+    if (isMotionStart(l, blocks.length > 0)) blocks.push([l]);
+    else if (blocks.length) blocks[blocks.length - 1].push(l);
+  }
   return blocks.map(b => {
     const s = b.join(" ");
     const v = vote(s);
