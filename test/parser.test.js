@@ -23,3 +23,21 @@ Vote 5-1-0, carried.`;
   assert.deepEqual(r.motions[0].gaps, []);
   assert.equal(r.ready, true);
 });
+test("negatives: no motion / ordinary moved are not motions", () => {
+  assert.equal(check("No motion was made.").motions.length, 0);
+  assert.equal(check("no motion was recorded.").motions.length, 0);
+  assert.equal(check("The board moved the meeting to Tuesday.").motions.length, 0);
+  const pair = `No motion was made.
+The board moved the meeting to Tuesday.`;
+  const r = check(pair);
+  assert.equal(r.motions.length, 0, "negative pair must yield zero motions");
+  assert.equal(r.ready, false);
+});
+test("positive control still parses a real motion", () => {
+  const r = check("Motion to approve the agenda. Moved by Dana Ruiz, seconded by Lee Park. Passed unanimously.");
+  assert.equal(r.motions.length, 1);
+  assert.equal(r.motions[0].mover, "Dana Ruiz");
+  assert.equal(r.motions[0].seconder, "Lee Park");
+  assert.equal(r.motions[0].result, "Carried");
+  assert.equal(r.ready, true);
+});
