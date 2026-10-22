@@ -2,7 +2,7 @@
 doc: spec
 status: draft
 ---
-# Motion Tracker — Technical Spec
+# Motion Tracker: Technical Spec
 
 ## How This Works, In Plain Language
 One small web app on Cloudflare. The page sends your notes to `/api/check`; a parser finds motions line by line, fills mover/seconder/vote, marks what's missing, and sends back a table. Nothing is saved.
@@ -50,7 +50,7 @@ Cloudflare Workers free plan only. No API keys, no paid calls.
 - **Huge paste** → 413 "Notes too long (64 KB max)".
 
 ## What Was Simplified and Why
-- **Pattern rules** instead of an AI model — free and explainable; an AI version would need keys and evals.
+- **Pattern rules** instead of an AI model: free and explainable; an AI version would need keys and evals.
 
 ## Decisions and Open Issues
-Rule-based + no storage chosen by Matt's standing rules (no paid spend, synthetic data). Uncertainty: how varied real notes phrasing is — tested against 3 sample styles.
+Rule-based + no storage chosen by Matt's standing rules (no paid spend, synthetic data). Uncertainty: how varied real notes phrasing is. Tested against one sample phrasing family plus negative cases.

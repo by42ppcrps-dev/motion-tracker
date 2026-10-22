@@ -1,4 +1,4 @@
-/** Parliamentary start patterns only — not bare "motion"/"moved" in ordinary English. */
+/** Parliamentary start patterns only, not bare "motion"/"moved" in ordinary English. */
 const START = /\b(?:motion\s+(?:to|by)|moved\s+by|(?:moved|moves|move)\s+to)\b/i;
 const NAME = "([A-Z][a-zA-Z'-]+(?:\\s[A-Z][a-zA-Z'-]+)?)";
 const ci = w => w.replace(/^([a-z])/, (c) => `[${c.toUpperCase()}${c}]`);
