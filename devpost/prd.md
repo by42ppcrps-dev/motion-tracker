@@ -2,7 +2,7 @@
 doc: prd
 status: draft
 ---
-# Motion Tracker — Product Requirements
+# Motion Tracker: Product Requirements
 For volunteer board secretaries: paste notes, see every motion and its gaps. Source: `scope.md > The Unique Kernel`.
 
 ## The Core Journey
@@ -30,8 +30,8 @@ Lines with "motion", "moved", "move to" start a motion; the following lines unti
 - [ ] Copies one line per motion: "Motion to X. Moved: A. Seconded: B. Vote 5-1-0. Carried."
 
 ## States and Boundaries
-- **Empty** — "No motions found. Lines with 'motion' or 'moved' start one."
-- **Nothing stored** — notes are processed per request and discarded.
+- **Empty**: "No motions found." with a hint naming the phrasings that start a motion ("Motion to", "Moved by", "moves to").
+- **Nothing stored**: notes are processed per request and discarded.
 
 ## Product Decisions
 - Rule-based extraction (free, predictable) over AI.
