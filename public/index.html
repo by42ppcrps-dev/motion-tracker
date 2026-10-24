@@ -29,7 +29,7 @@ $("sample").onclick=()=>{$("n").value=SAMPLE;run()};$("go").onclick=run;
 $("copy").onclick=async()=>{if(!last||!last.ready)return;await navigator.clipboard.writeText(last.summary);$("copy").textContent="Copied";setTimeout(()=>$("copy").textContent="Copy summary",1500)};
 async function run(){const r=await fetch("/api/check",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({notes:$("n").value})});
 const d=await r.json();if(d.error){last=null;$("copy").disabled=true;$("out").innerHTML=`<div class="banner no">${esc(d.error)}</div>`;return}last=d;
-if(!d.motions.length){$("out").innerHTML=`<div class="banner no">No motions found. Lines with “motion” or “moved” start one.</div>`;$("copy").disabled=true;return}
+if(!d.motions.length){$("out").innerHTML=`<div class="banner no">No motions found. Start a motion with a phrase like “Motion to…”, “Moved by…” or “Dana Ruiz moved to…”.</div>`;$("copy").disabled=true;return}
 const n=d.motions.reduce((a,m)=>a+m.gaps.length,0);
 const cell=(m,f,v)=>m.gaps.some(g=>g.field===f)?`<span class="gap">missing</span>`:esc(v);
 const vt=v=>!v?null:v.unanimous?"unanimous":`${v.for}-${v.against}-${v.abstain}`;
