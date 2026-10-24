@@ -1,6 +1,6 @@
 ---
 doc: spec
-status: draft
+status: approved
 ---
 # Motion Tracker: Technical Spec
 
@@ -35,8 +35,10 @@ Motion = {text, mover, seconder, vote:{for,against,abstain}|null, result, gaps[]
 motion-tracker/
 ├── src/parser.js     # motion finding + gaps
 ├── src/worker.js     # API + static assets
+├── src/ui.js         # check-state helpers (edit clears a stale result)
 ├── public/index.html # UI
 ├── test/parser.test.js
+├── test/ui.test.js
 ├── devpost/          # scope, prd, spec, learner profile
 ├── wrangler.toml
 └── LICENSE           # MIT

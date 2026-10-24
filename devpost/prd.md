@@ -1,6 +1,6 @@
 ---
 doc: prd
-status: draft
+status: approved
 ---
 # Motion Tracker: Product Requirements
 For volunteer board secretaries: paste notes, see every motion and its gaps. Source: `scope.md > The Unique Kernel`.
@@ -20,7 +20,7 @@ Cream paper background, dark ink text, serif headings, one red and one green acc
 
 ## Features and Behavior
 ### Finding motions
-Lines with "motion", "moved", "move to" start a motion; the following lines until the next motion supply details.
+Parliamentary starts ("Motion to", "Motion by", "Moved by", "Dana Ruiz moved to", "moves to") open a motion; the following lines until the next motion supply details. A bare "Moved by Lee Park" line attaches to the open motion, and ordinary English such as "No motion was made" or "we moved the meeting" does not start one.
 - [ ] Recognizes "Moved by X", "X moved", "motion by X"; "seconded by Y", "Y seconded", "second: Y".
 - [ ] Recognizes votes "5-1-1", "passed 6-0", "unanimous", "motion carried/failed".
 ### Gap flags

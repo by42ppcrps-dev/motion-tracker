@@ -1,6 +1,6 @@
 ---
 doc: scope
-status: draft
+status: approved
 ---
 # Motion Tracker
 Paste your board meeting notes; see every motion and what's missing before the minutes go out.
