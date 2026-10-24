@@ -1203,5 +1203,1532 @@
     }
    ]
   }
+ },
+ {
+  "id": "redteam1-city-council-rollcall",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 1, written blind by a reviewer",
+  "text": "CITY OF MARLOWE SPRINGS — REGULAR COUNCIL MEETING\nMarch 4, 2026, 7:02 p.m., Council Chambers\n\nItem 6.b — Resolution 2026-14, award of street resurfacing contract to Delgado Paving ($412,000–$438,500 depending on alternates). Councilmember Okonkwo-Reyes moved approval; seconded by Councilmember Lindqvist.\nRoll call: Ayes — Okonkwo-Reyes, Lindqvist, Abernathy, Tran. Nays — Mayor Pro Tem Vasquez. Abstain — none.\nMotion carried 4-1.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Okonkwo-Reyes",
+     "seconder": "Lindqvist",
+     "vote": "4-1-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam1-msc-quicknotes",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 1, written blind by a reviewer",
+  "text": "Finance Cmte 2/11\nM/S/C Patel/Huang to approve Jan minutes.\nM/S/C Huang/Dorsey-Whitfield to accept treasurer's report as presented.\nNext mtg 3/11 @ 6pm.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Patel",
+     "seconder": "Huang",
+     "vote": "carried",
+     "result": "Carried"
+    },
+    {
+     "mover": "Huang",
+     "seconder": "Dorsey-Whitfield",
+     "vote": "carried",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam1-schoolboard-dies-no-second",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 1, written blind by a reviewer",
+  "text": "Harlan Unified School District — Board of Trustees, Regular Session\n\n7. Bell Schedule 2026–27\nTrustee Ballard moved to postpone the bell schedule change to fall 2027. The motion died for lack of a second.\nTrustee Ng then moved to adopt the bell schedule as proposed (8:05 a.m.–2:50 p.m.), seconded by Trustee Fairweather. Vote 5-0-1 (Ballard abstaining). Motion carried.",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Ballard",
+     "seconder": null,
+     "vote": null,
+     "result": null
+    },
+    {
+     "mover": "Ng",
+     "seconder": "Fairweather",
+     "vote": "5-0-1",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam1-hoa-unanimous",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 1, written blind by a reviewer",
+  "text": "Cedar Hollow HOA Board Meeting – Minutes\nPresent: G. Halvorsen (Pres.), R. Matsuda, L. Ferrante, B. Oduya\n\nPool: Motion by Gwen Halvorsen, second by Ray Matsuda, to approve the pool resurfacing bid from BlueLine Pools ($18,200). Approved unanimously.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Gwen Halvorsen",
+     "seconder": "Ray Matsuda",
+     "vote": "unanimous",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam1-pta-no-vote-moved-on",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 1, written blind by a reviewer",
+  "text": "Lincoln Elementary PTA – October General Meeting\n\nSpring Carnival: Mrs. Castellanos moved that we spend up to $600 on the bounce house rental. Mr. Odum seconded. Discussion followed about insurance requirements; Principal Fry will check with the district office.\n\nWe moved on to the book fair report. Ms. Jaworski said sales were $1,140, up from last year.",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Castellanos",
+     "seconder": "Odum",
+     "vote": null,
+     "result": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam1-church-amendment",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 1, written blind by a reviewer",
+  "text": "Grace Fellowship Church Council – Minutes of the Stated Meeting\n\nProperty: Elder Brightwater moved to allocate $2,500 from the memorial fund toward the fellowship hall roof repair. Deacon St. Clair seconded. Sister Amadi moved to amend the amount to $3,000; seconded by Elder Brightwater. The amendment carried 7-2. The main motion as amended then carried 8-1-0.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Brightwater",
+     "seconder": "St. Clair",
+     "vote": "8-1-0",
+     "result": "Carried"
+    },
+    {
+     "mover": "Amadi",
+     "seconder": "Brightwater",
+     "vote": "7-2-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam1-table-as-text-withdrawn",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 1, written blind by a reviewer",
+  "text": "Riverbend Arts Collective – Board Actions, Sept 2026\n\nMotion                                   | Moved      | Seconded | Vote  | Result\n-----------------------------------------|------------|----------|-------|----------\nApprove FY27 budget                      | Kowalczyk  | Abiodun  | 6-0-0 | Carried\nHire bookkeeper (part-time, $22–$26/hr)  | Abiodun    | Fenwick  | 4-2-0 | Carried\nRename Outreach Committee                | Fenwick    | —        | —     | Withdrawn",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Kowalczyk",
+     "seconder": "Abiodun",
+     "vote": "6-0-0",
+     "result": "Carried"
+    },
+    {
+     "mover": "Abiodun",
+     "seconder": "Fenwick",
+     "vote": "4-2-0",
+     "result": "Carried"
+    },
+    {
+     "mover": "Fenwick",
+     "seconder": null,
+     "vote": null,
+     "result": "Withdrawn"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam1-lowercase-sloppy",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 1, written blind by a reviewer",
+  "text": "board mtg 10/12 notes\n- jen pearce moved to buy new projector ~$450, dave seconded, all in favor\n- parking thing - no action, revisit nov\n- mark moved to adjourn 8:47, sue 2nd, passed",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Pearce",
+     "seconder": "Dave",
+     "vote": "unanimous",
+     "result": "Carried"
+    },
+    {
+     "mover": "Mark",
+     "seconder": "Sue",
+     "vote": "carried",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam1-tabled-main-motion",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 1, written blind by a reviewer",
+  "text": "Northside Youth Soccer League — Board of Directors\n\nBranding: Director Haddad moved to approve the new league logo as presented by the design subcommittee. Seconded by Director Pruitt-Lang. Following lengthy discussion, Director Osei moved to table the motion until the June meeting; seconded by Director Haddad. Motion to table carried 5-2.",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Haddad",
+     "seconder": "Pruitt-Lang",
+     "vote": null,
+     "result": null
+    },
+    {
+     "mover": "Osei",
+     "seconder": "Haddad",
+     "vote": "5-2-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam1-nonprofit-withdrawn",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 1, written blind by a reviewer",
+  "text": "Friends of the Eastgate Library — Annual Meeting\n\nDues: Ms. Van der Berg moved to increase annual membership dues from $35 to $45. Mr. Iwasaki seconded. After discussion of the impact on senior members, Ms. Van der Berg withdrew the motion with the consent of the seconder. The board will revisit dues in January.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Van der Berg",
+     "seconder": "Iwasaki",
+     "vote": null,
+     "result": "Withdrawn"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam1-town-council-lost",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 1, written blind by a reviewer",
+  "text": "PARISH OF ST. ANSELM — TOWN COUNCIL\n\n14/26. Riverside Park hours\nMoved by Cllr. Moreau, seconded by Cllr. Achterberg, that the 11:00 p.m. closing time for Riverside Park be extended to midnight on Fridays and Saturdays.\nFor: 3. Against: 5. Abstentions: 1.\nLOST.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Moreau",
+     "seconder": "Achterberg",
+     "vote": "3-5-1",
+     "result": "Failed"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam1-number-distractors",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 1, written blind by a reviewer",
+  "text": "Facilities Subcommittee — 6:30–7:15 pm\nReviewed 4 bids for HVAC replacement ranging $3-5k (units 2-4 only). Room 10-B excluded.\nMotion (Ellison/Rourke) to accept the low bid from Kessler Mechanical, $3,250.\nVote: 4-0-2. Carried.\nAdjourned 7:15.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Ellison",
+     "seconder": "Rourke",
+     "vote": "4-0-2",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam1-three-in-one-paragraph",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 1, written blind by a reviewer",
+  "text": "Mr. Chaudhry moved and Ms. Lindgren seconded approval of the consent agenda, which passed 6-0; Ms. Lindgren then moved, seconded by Dr. Achebe, to approve the 5th-grade field trip to Hartwell Science Center ($14/student), which passed 5-1; finally Dr. Achebe moved to adjourn at 9:12 p.m., seconded by Mr. Chaudhry, carried.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Chaudhry",
+     "seconder": "Lindgren",
+     "vote": "6-0-0",
+     "result": "Carried"
+    },
+    {
+     "mover": "Lindgren",
+     "seconder": "Achebe",
+     "vote": "5-1-0",
+     "result": "Carried"
+    },
+    {
+     "mover": "Achebe",
+     "seconder": "Chaudhry",
+     "vote": "carried",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam1-rollcall-names-no-total",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 1, written blind by a reviewer",
+  "text": "VILLAGE OF PRAIRIE GROVE — BOARD OF ALDERMEN\n\nMotion to adopt Ordinance 812 (Short-Term Rental Registration).\nMoved: Alderman Fitzgerald-Khan\nSecond: Alderwoman Delacroix\nRoll call: Fitzgerald-Khan – yes; Delacroix – yes; Brennan – no; Szymanski – yes; Oyelaran – absent; Mertz – abstain.\nOrdinance adopted.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Fitzgerald-Khan",
+     "seconder": "Delacroix",
+     "vote": "3-1-1",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam1-carried-but-no-seconder",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 1, written blind by a reviewer",
+  "text": "Board of Education – Work Session Minutes\n\nPolicy 5113 (Attendance): Motion by Trustee Lam to approve the revised attendance policy with the edits discussed. Motion carried 6-1, Trustee Greer opposed.",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Lam",
+     "seconder": null,
+     "vote": "6-1-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam1-abbrev-block",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 1, written blind by a reviewer",
+  "text": "MOT: Approve purchase of 2 laptops for front office (≤$2,400 total)\nMVD: K. Aldana-Ruiz\n2ND: P. Gorecki\nVOTE: Y-5 N-0 ABS-0\nRES: CARRIED",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Aldana-Ruiz",
+     "seconder": "Gorecki",
+     "vote": "5-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam1-transcript-anonymous-second",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 1, written blind by a reviewer",
+  "text": "PLANNING COMMISSION — VERBATIM EXCERPT\n\nCHAIR WEXLER: Is there a motion to recommend approval of the Elm Street rezoning?\nMEMBER OYAMA: So moved.\nCHAIR WEXLER: Is there a second?\n(A second was heard.)\nCHAIR WEXLER: All in favor? Opposed? Motion carries. Moving on to item 5.",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Oyama",
+     "seconder": null,
+     "vote": "carried",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam1-ms-failed-then-replacement",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 1, written blind by a reviewer",
+  "text": "Booster Club 9/30\n- M/S (Rivera/Kim) approve snack bar contract w/ Sunny Days Vending. Failed 2-4-1.\n- M/S (Kim/Abernathy-Cole) approve contract w/ Greenleaf Concessions instead. Passed 5-2.\n- Car wash moved to Oct 18, 9am–1pm.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Rivera",
+     "seconder": "Kim",
+     "vote": "2-4-1",
+     "result": "Failed"
+    },
+    {
+     "mover": "Kim",
+     "seconder": "Abernathy-Cole",
+     "vote": "5-2-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam1-voice-vote-accents",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 1, written blind by a reviewer",
+  "text": "Westlake Rotary Club – Board Minutes\n\nMotion: Approve donation of $250–$300 to the Westlake Community Food Bank, final amount at the Treasurer's discretion.\nMoved: Treasurer Ingrid Solberg\nSeconded: Secretary Tomás Echeverría\nThe motion carried on a voice vote.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Ingrid Solberg",
+     "seconder": "Tomás Echeverría",
+     "vote": "carried",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam1-recused-substitute-seconder",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 1, written blind by a reviewer",
+  "text": "Zoning Board of Appeals – Case ZBA-26-07 (fence height variance, 41 Larkspur Ln.)\n\nMs. Darrow-Pike moved to approve the variance as requested. Mr. Hollis offered to second but then recused himself, noting he lives next door; Mrs. Quan seconded instead. Vote 3-0-1 (Hollis recused). Carried.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Darrow-Pike",
+     "seconder": "Quan",
+     "vote": "3-0-1",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam2-council-res-rollcall-absent",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 2, written blind by a reviewer",
+  "text": "CITY OF MAPLE HOLLOW — REGULAR COUNCIL MEETING\nOctober 6, 2026, 7:00 p.m., Council Chambers\n\nPresent: Mayor Ingrid Halvorsen (presiding), Councilmembers Dana Okafor-Lindqvist, Luis Ruiz, Patrick Brennan, Emi Tanaka, Kwame Mbeki\nAbsent: Councilmember Sofia Castellano\n\n8. CONSENT CALENDAR\nThe item regarding the Elm Street lighting study was moved to next month's agenda at staff request.\n\n9. RESOLUTIONS\nRes. 2026-14, A Resolution Authorizing the Sale of Surplus Fleet Vehicles.\nCouncilmember Okafor-Lindqvist moved adoption of Res. 2026-14; seconded by Councilmember Ruiz.\nRoll call vote:\nAyes: Okafor-Lindqvist, Ruiz, Brennan, Tanaka, Mbeki\nNoes: None\nAbstain: None\nAbsent: Castellano\nRes. 2026-14 ADOPTED.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Okafor-Lindqvist",
+     "seconder": "Ruiz",
+     "vote": "5-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam2-hoa-msc-slash-dollar-range",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 2, written blind by a reviewer",
+  "text": "Willow Bend HOA Board — 9/18/26\nDirectors present: Patel, Van der Berg, Gold, Ito, Schaefer\n\nLandscaping: three bids received ranging $4,200–$4,800/mo.\nM/S/C (Patel/Van der Berg) to accept GreenEdge bid at $4,200/mo for 12 months. 4-1 (Gold opposed).\n\nDues: M/S (Gold/Ito) to raise annual dues 3% effective 1/1/27. Motion failed 2-3.\n\nAdj 8:51pm.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Patel",
+     "seconder": "Van der Berg",
+     "vote": "4-1-0",
+     "result": "Carried"
+    },
+    {
+     "mover": "Gold",
+     "seconder": "Ito",
+     "vote": "2-3-0",
+     "result": "Failed"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam2-schoolboard-dies-no-second",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 2, written blind by a reviewer",
+  "text": "Lakeside Unified School District — Board of Trustees, Special Session, Sept 29, 2026\n\nTrustee Gerald Whitfield moved that the Lakeside High gymnasium be renamed in honor of former coach Ray Dumont. The President called for a second three times. Hearing none, the motion died for lack of a second.\n\nTrustee Ana Beltrán moved to approve the revised bell schedule (8:05 a.m.–2:50 p.m.) for the spring semester. Trustee Marcus Yoon seconded. Motion carried 4-1, Trustee Whitfield voting no.",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Whitfield",
+     "seconder": null,
+     "vote": null,
+     "result": null
+    },
+    {
+     "mover": "Beltrán",
+     "seconder": "Yoon",
+     "vote": "4-1-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam2-pta-lowercase-sloppy",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 2, written blind by a reviewer",
+  "text": "pta mtg notes 10/2 (library)\n\n- 14 ppl there, quorum ok\n- treasurer rpt: $2,310 in acct after book fair\n- jen kowalczyk moved to buy popcorn machine for movie nite, up to $350. sara mendes-oyelaran 2nd. all in favor, nobody against\n- moved on to fall festival — need vols for 4-6pm shift, sign up sheet going around\n- next mtg nov 6",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Kowalczyk",
+     "seconder": "Mendes-Oyelaran",
+     "vote": "unanimous",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam2-nonprofit-amendment-order",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 2, written blind by a reviewer",
+  "text": "Riverbend Food Collective — Board of Directors Minutes, October 14, 2026\nSeven directors present; quorum established.\n\nFY27 Budget. Ms. Ferreira moved to adopt the FY27 operating budget of $612,000 as presented; Mr. Nakamura seconded. During discussion, Dr. Delacroix-Hughes moved to amend the motion by reducing the staff travel line from $9,000 to $5,500, with the difference moved into the volunteer appreciation line. Ms. Ferreira seconded the amendment. The amendment carried 6-1, Mr. Nakamura opposed. The main motion, as amended, then carried 7-0.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Ferreira",
+     "seconder": "Nakamura",
+     "vote": "7-0-0",
+     "result": "Carried"
+    },
+    {
+     "mover": "Delacroix-Hughes",
+     "seconder": "Ferreira",
+     "vote": "6-1-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam2-church-tabled-main-motion",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 2, written blind by a reviewer",
+  "text": "St. Brendan's Parish Council — Minutes of October 20, 2026\n\nFacilities. Elder Margaret Osei moved that the council authorize replacement of the nave pews at a cost not to exceed $38,000; seconded by Deacon Paul Abernathy. Considerable discussion followed regarding the capital campaign timeline. Brother Wei Liu then moved to table the pew motion until the January meeting, when final quotes are expected; seconded by Sister Priya Agarwal. The motion to table carried unanimously.\n\nThe council moved into the fellowship hall for refreshments at 8:15.",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Osei",
+     "seconder": "Abernathy",
+     "vote": null,
+     "result": null
+    },
+    {
+     "mover": "Liu",
+     "seconder": "Agarwal",
+     "vote": "unanimous",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam2-planning-buried-narrative",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 2, written blind by a reviewer",
+  "text": "Harbor Point Planning Commission — Minutes, October 8, 2026. Commissioners present: Ahn, Byrne, Castillo, Haddad-Reyes, Lindqvist, Mwangi, Pereira, St. Clair. Absent: Ostrowski.\n\nItem 4, Conditional Use Permit CUP-26-031 (Old Cannery Arts Collective). Senior Planner Teodoro summarized the staff report, noting that the applicant, which recently moved into the former cannery office building on Wharf Road, intends to host a nine-day motion picture festival in June with outdoor screenings from 7:30 to 11:00 p.m. Three members of the public spoke, two in support and one raising parking concerns, and the applicant agreed to a shuttle condition. Commissioner Pereira asked whether amplified sound would stop by 10:30, and staff confirmed it would. After further discussion Commissioner St. Clair moved approval of CUP-26-031 subject to the conditions in the staff report plus the shuttle condition, which Commissioner Haddad-Reyes seconded, and the motion passed on a vote of seven in favor, none opposed, with Commissioner Byrne abstaining because of a business relationship with the applicant. The Chair then moved on to Item 5, a study session on the waterfront plan, for which no action was taken.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "St. Clair",
+     "seconder": "Haddad-Reyes",
+     "vote": "7-0-1",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam2-vote-exceeds-present",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 2, written blind by a reviewer",
+  "text": "Fernwood Library Friends — Board Meeting 10/11/2026\nPresent (5): Arnaud, Bello, Castellanos, Dimitrov, Esposito\nAbsent: Fairweather\n\n1. Minutes of Sept meeting — Motion Bello, second Dimitrov, to approve as distributed. Vote 6-0. Approved.\n2. Book sale recap — raised approx. $1,900–$2,100 (final count pending).",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Bello",
+     "seconder": "Dimitrov",
+     "vote": "6-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam2-text-table-withdrawn-no-second",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 2, written blind by a reviewer",
+  "text": "Cedar Ridge Cemetery Association — Action Log, Oct 2026\n\n| # | Motion                         | Moved     | Seconded | Vote    | Result    |\n|---|--------------------------------|-----------|----------|---------|-----------|\n| 1 | Approve Aug & Sept minutes     | Kaur      | Lindgren | 5-0-0   | Carried   |\n| 2 | Purchase zero-turn mower ($7k) | Lindgren  | —        | —       | Withdrawn |\n| 3 | Renew snow removal contract    | Moreau    | Kaur     | carried | Carried   |",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Kaur",
+     "seconder": "Lindgren",
+     "vote": "5-0-0",
+     "result": "Carried"
+    },
+    {
+     "mover": "Lindgren",
+     "seconder": null,
+     "vote": null,
+     "result": "Withdrawn"
+    },
+    {
+     "mover": "Moreau",
+     "seconder": "Kaur",
+     "vote": "carried",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam2-withdrawn-with-seconder-complete",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 2, written blind by a reviewer",
+  "text": "Pinecrest Volunteer Fire Company — Trustees Meeting, October 3, 2026\n\nAudit. Mr. Rafael Quintero moved, Ms. Funmi Adebayo-Smith seconded, to engage a second outside auditor for the FY26 review. After the Treasurer explained that the current firm's engagement letter already covers the requested scope, Mr. Quintero withdrew his motion with the consent of the seconder.\n\nInvoices. Moved by Ms. Adebayo-Smith, seconded by Mr. Quintero, to approve payment of the Sept invoices totaling $11,482.16. Carried.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Quintero",
+     "seconder": "Adebayo-Smith",
+     "vote": null,
+     "result": "Withdrawn"
+    },
+    {
+     "mover": "Adebayo-Smith",
+     "seconder": "Quintero",
+     "vote": "carried",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam2-numbered-agenda-info-item",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 2, written blind by a reviewer",
+  "text": "NORTH VALLEY SCHOOL DISTRICT — BOARD OF EDUCATION\nRegular Meeting — October 15, 2026\nTrustees present: Ngata, Holloway, Ferris, Abeyta, Kristiansen, Moreau-Diallo, Sutherland\n\n5. ACTION ITEMS\n5.1 Approve Consent Agenda\n    Moved: Trustee Ngata   Seconded: Trustee Holloway\n    Vote: 6-0-1 (Trustee Ferris abstained)\n5.2 Approve contract with BrightBus Transit, LLC (est. $1.2M–$1.35M annually)\n    Moved: Trustee Holloway   Seconded: Trustee Ngata\n    Vote: Unanimous\n5.3 Board Policy 4120 — Employee Leave (First Reading)\n    Information only; no action taken. Second reading moved to Nov. 19.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Ngata",
+     "seconder": "Holloway",
+     "vote": "6-0-1",
+     "result": "Carried"
+    },
+    {
+     "mover": "Holloway",
+     "seconder": "Ngata",
+     "vote": "unanimous",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam2-no-motions-decoys-only",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 2, written blind by a reviewer",
+  "text": "Glenwood Neighborhood Association — notes, Oct 9\n\nStaff moved the meeting to the library annex because of the HVAC repair. About 20 residents attended.\n\n- Traffic calming: the item was moved to next month so the city engineer can attend.\n- Officer Brandt gave the crime report; one car break-in on Alder.\n- Movie night update: the committee is still choosing a motion picture for the Nov 14 screening (6:30–8:30 pm).\n- The Hendersons have moved into the old Pruitt house — welcome!\n\nMeeting ended 8:05.",
+  "expect": {
+   "ready": false,
+   "motions": []
+  }
+ },
+ {
+  "id": "redteam2-council-second-motion-no-vote",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 2, written blind by a reviewer",
+  "text": "Town of Brookhaven — Council Minutes, Oct 13, 2026\n\nOn motion by Councilor Delphine Beaumont-Tate, seconded by Councilor Imran Iqbal, the Council approved the Harvest Parade route as submitted by the Chamber of Commerce.\n\nCouncilor Iqbal then moved to waive the $250 special event permit fee for the parade. Seconded by Councilor Beaumont-Tate. Discussion ensued regarding precedent for other nonprofits. The Mayor moved on to the next item, the library roof update.",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Beaumont-Tate",
+     "seconder": "Iqbal",
+     "vote": "carried",
+     "result": "Carried"
+    },
+    {
+     "mover": "Iqbal",
+     "seconder": "Beaumont-Tate",
+     "vote": null,
+     "result": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam2-rollcall-count-from-names",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 2, written blind by a reviewer",
+  "text": "Grace Fellowship Church — Board of Trustees, 10/19/2026\n\nMotion to approve the roof repair proposal from Summit Roofing in the amount of $18,500 (Moved: Dr. Elena Vasquez-Moreno; Second: Rev. Thomas Okonkwo).\nRoll call:\n  Vasquez-Moreno .... yes\n  Okonkwo ........... yes\n  Pruitt ............ no\n  Szabo ............. yes\n  Delgado ........... absent\n  Fenwick ........... abstain\nMotion carried.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Vasquez-Moreno",
+     "seconder": "Okonkwo",
+     "vote": "3-1-1",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam2-quicknotes-abbrev-died",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 2, written blind by a reviewer",
+  "text": "ops cmte 10/21 quick notes\n\nmtn: revise Q3 budget per CFO memo\n  m: grayson  s: ohara-brandt\n  v: 4y 2n 1abs -> passed\n\nmtn: lease new copier ($180-$220/mo)\n  m: ohara-brandt  s: none\n  -> died, no 2nd\n\nTODO: grayson to send revised #s by fri",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Grayson",
+     "seconder": "Ohara-Brandt",
+     "vote": "4-2-1",
+     "result": "Carried"
+    },
+    {
+     "mover": "Ohara-Brandt",
+     "seconder": null,
+     "vote": null,
+     "result": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam2-hoa-failed-but-complete",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 2, written blind by a reviewer",
+  "text": "Sunset Terrace Owners Association — Annual Meeting, Oct 4, 2026\nSeven directors present.\n\nShort-term rentals: Motion by Bernadette Kowalski-Ng (Lot 14) to amend the CC&Rs to permit rentals of fewer than 30 days, seconded by Hiroshi Matsuda (Lot 3). After lengthy discussion the motion failed, 3 in favor, 4 opposed, 0 abstaining.\n\nMotion to adjourn at 9:42 p.m. by Matsuda, second by Kowalski-Ng, carried.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Kowalski-Ng",
+     "seconder": "Matsuda",
+     "vote": "3-4-0",
+     "result": "Failed"
+    },
+    {
+     "mover": "Matsuda",
+     "seconder": "Kowalski-Ng",
+     "vote": "carried",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam2-moved-and-seconded-anonymous",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 2, written blind by a reviewer",
+  "text": "Oakmont Garden Club — Executive Board, October 7, 2026\n\nTreasurer's Report: It was moved and seconded to approve the treasurer's report as presented. Carried unanimously.\n\nDonations: Ms. Yasmin Farouk moved to accept the in-kind gift of bulbs and mulch valued at $2,000–$2,500 from Hollis Nursery. The motion was seconded and carried 5-0.",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": null,
+     "seconder": null,
+     "vote": "unanimous",
+     "result": "Carried"
+    },
+    {
+     "mover": "Farouk",
+     "seconder": null,
+     "vote": "5-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam2-three-motions-one-paragraph",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 2, written blind by a reviewer",
+  "text": "Westbrook Arts Council, Oct 16, 2026 (present: Fitzgerald, Oduya, Lam, Van Houten, Sorensen). Fitzgerald moved and Oduya seconded approval of the agenda (carried, 5-0); Oduya then moved, Fitzgerald seconding, to approve the August 12 minutes as corrected (carried 4-0-1, Lam abstaining as she was absent in August); finally, Lam moved to extend gallery hours to 2:00–4:00 p.m. on Saturdays through December, seconded by Van Houten, which carried without objection. Sorensen gave the grants update; the state deadline has moved to Jan. 9.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Fitzgerald",
+     "seconder": "Oduya",
+     "vote": "5-0-0",
+     "result": "Carried"
+    },
+    {
+     "mover": "Oduya",
+     "seconder": "Fitzgerald",
+     "vote": "4-0-1",
+     "result": "Carried"
+    },
+    {
+     "mover": "Lam",
+     "seconder": "Van Houten",
+     "vote": "unanimous",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam2-seconder-listed-absent",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 2, written blind by a reviewer",
+  "text": "Village of East Linden — Board of Trustees, October 22, 2026\nROLL CALL: Present — President Garza, Trustees Whitcombe, Abernathy-Lowe, Nakashima. Absent — Trustee Yilmaz.\n\nNEW BUSINESS\n(a) Ordinance 26-09, amending the leaf-burning hours to 10 a.m.–4 p.m.\nTrustee Whitcombe moved to adopt Ordinance 26-09, seconded by Trustee Yilmaz.\nAyes: Garza, Whitcombe, Abernathy-Lowe, Nakashima (4). Nays: 0. Motion carried.",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Whitcombe",
+     "seconder": "Yilmaz",
+     "vote": "4-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam2-mover-equals-seconder",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 2, written blind by a reviewer",
+  "text": "Bayview Credit Union Supervisory Committee — 10/10/26\nMembers: Directors Pham, Okeke, Lindstrom-Varga\n\nItem 3. Approve engagement of Carver & Liu CPAs for FY26 supervisory audit, fee $14,000–$16,500.\nMoved by Director Pham, seconded by Director Pham.\nVote: 3-0. Carried.",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Pham",
+     "seconder": "Pham",
+     "vote": "3-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam3-01",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 3, written blind by a reviewer",
+  "text": "Res. 2026-14 — A resolution authorizing the City Manager to enter into an agreement with Tri-County Paving, LLC for the Elm Street resurfacing project in an amount not to exceed $412,800.\nCouncilmember Okafor-Beale moved adoption; seconded by Vice Mayor Lindqvist.\nRoll call: Okafor-Beale, aye; Lindqvist, aye; Dresner, aye; Van der Hoek, nay; Mayor Pruitt, aye; Castellanos, absent.\nResolution adopted 4-1.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Okafor-Beale",
+     "seconder": "Lindqvist",
+     "vote": "4-1-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam3-02",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 3, written blind by a reviewer",
+  "text": "Superintendent Haldane gave an update on the bus driver shortage, noting that routes 14 and 22 continue to run 10-15 minutes late. The discussion of the proposed later start time was moved to the November 12 work session at the request of Ms. Arceneaux. Following public comment from three parents regarding the cafeteria vendor, Mr. Tolliver made a motion to approve the revised 2026-27 meal pricing schedule ($2.85–$3.40 per lunch), which was seconded by Dr. Nakamura-Fitch. The motion carried on a vote of six in favor, one opposed (Arceneaux).",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Tolliver",
+     "seconder": "Nakamura-Fitch",
+     "vote": "6-1-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam3-03",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 3, written blind by a reviewer",
+  "text": "Oakmont Ridge HOA — Board mtg 10/14/26, 7:02pm\nPresent: R. Delacroix (Pres), J. Whitcombe, P. Szymanski, T. Abernathy-Ruiz. Absent: K. Moe\n- Pool resurfacing bid from BlueLine ($18,500-$21,000): M/S/C Whitcombe/Szymanski to accept, 4-0\n- Landscaping contract renewal (GreenScape, 2 yr): M/S Abernathy-Ruiz/Delacroix, C unan.\n- Adj 8:15",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Whitcombe",
+     "seconder": "Szymanski",
+     "vote": "4-0-0",
+     "result": "Carried"
+    },
+    {
+     "mover": "Abernathy-Ruiz",
+     "seconder": "Delacroix",
+     "vote": "unanimous",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam3-04",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 3, written blind by a reviewer",
+  "text": "Council member Grünewald moved that the congregation's 2027 benevolence giving be raised from 8% to 10% of general offerings. The motion died for lack of a second. Pastor Oyelaran asked that the topic return at the January meeting after the stewardship campaign. Moved by Hollis Bramwell-Tate, seconded by Inga Sorensen, to approve the September financial report as presented. Carried.",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Grünewald",
+     "seconder": null,
+     "vote": null,
+     "result": "Died"
+    },
+    {
+     "mover": "Bramwell-Tate",
+     "seconder": "Sorensen",
+     "vote": "carried",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam3-05",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 3, written blind by a reviewer",
+  "text": "pta mtg 9/30 - lincoln elem\nfall fest budget, up to $1200 max for bounce house + food trucks. jen castillo moved, seconded by deb ferraro-quinn. all in favor, passed\nalso talked abt the yearbook - photos due nov 1\nmrs. pham moved to buy 2 new laminators ($340 total) - 2nd marcus webb - vote 11-2",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Castillo",
+     "seconder": "Ferraro-Quinn",
+     "vote": "unanimous",
+     "result": "Carried"
+    },
+    {
+     "mover": "Pham",
+     "seconder": "Webb",
+     "vote": "11-2-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam3-06",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 3, written blind by a reviewer",
+  "text": "The Executive Director reported that staff moved into the new office at 418 Calloway St. on Oct. 3. Because of ongoing HVAC work, staff moved the meeting to the Annex conference room. The film committee reported that the motion picture license for the winter screening series ($650) has been renewed. Ms. Ellery-Vance moved to approve the 2027 grant calendar; Mr. Boateng seconded. Approved 9-0-1 (Ruskin abstaining).",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Ellery-Vance",
+     "seconder": "Boateng",
+     "vote": "9-0-1",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam3-07",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 3, written blind by a reviewer",
+  "text": "SELECT BOARD — Oct. 6, 2026, 6:30 PM, Town Hall\nPresent: Chair Whitlock, Selectmen Abara, Fenwick, and Dusseau. Selectman MacAllister absent.\nMotion by Fenwick, second by Abara, to award the 2026-27 winter plowing contract to Granite State Snow Removal for $74,250. Motion carried 5-0.",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Fenwick",
+     "seconder": "Abara",
+     "vote": "5-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam3-08",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 3, written blind by a reviewer",
+  "text": "ROLL CALL: Trustees Heywood (present), Marchetti (present), Ogunleye (absent), Strand (present), Bellweather (present).\n6.3 Approve purchase of two (2) Ford F-250 trucks for Public Works, $96,400.\nMoved: Ogunleye. Seconded: Strand.\nAyes: Heywood, Marchetti, Strand, Bellweather. Nays: none.\nMotion carried.",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Ogunleye",
+     "seconder": "Strand",
+     "vote": "4-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam3-09",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 3, written blind by a reviewer",
+  "text": "It was moved and seconded to approve the minutes of the August 19 meeting as corrected. Motion carried unanimously. Treasurer Whitfield-Osei then moved to accept the FY26 audit report from Klein & Marsh CPAs; seconded by Mr. Danforth. Carried.",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": null,
+     "seconder": null,
+     "vote": "unanimous",
+     "result": "Carried"
+    },
+    {
+     "mover": "Whitfield-Osei",
+     "seconder": "Danforth",
+     "vote": "carried",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam3-10",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 3, written blind by a reviewer",
+  "text": "Council Member Villarreal moved to approve the FY27 street lighting budget of $1.2 million. Council Member Ashby-Grant seconded. Council Member Thibodeaux moved to amend the motion to reduce the amount to $950,000; seconded by Mayor Pro Tem Kowalczyk. The amendment failed 2-5. The main motion then carried 6-1, Thibodeaux voting no.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Villarreal",
+     "seconder": "Ashby-Grant",
+     "vote": "6-1-0",
+     "result": "Carried"
+    },
+    {
+     "mover": "Thibodeaux",
+     "seconder": "Kowalczyk",
+     "vote": "2-5-0",
+     "result": "Failed"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam3-11",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 3, written blind by a reviewer",
+  "text": "Dir. Halvorsen moved to suspend the coaching stipend program for the spring season; seconded by Dir. Mbeki. After discussion, Dir. Halvorsen withdrew the motion with the consent of the seconder. Dir. Pruett moved to refer the stipend question to the finance committee, Dir. Lattimore seconded, motion passed 7-0.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Halvorsen",
+     "seconder": "Mbeki",
+     "vote": null,
+     "result": "Withdrawn"
+    },
+    {
+     "mover": "Pruett",
+     "seconder": "Lattimore",
+     "vote": "7-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam3-12",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 3, written blind by a reviewer",
+  "text": "Ms. de la Garza moved to hire a part-time bookkeeper at $22-$26/hr, 15 hrs/week. Before a second was offered, she withdrew the motion pending two more quotes. Mr. St. Clair moved to adjourn at 9:47 p.m.; seconded by Ms. Yoon; carried.",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "de la Garza",
+     "seconder": null,
+     "vote": null,
+     "result": "Withdrawn"
+    },
+    {
+     "mover": "St. Clair",
+     "seconder": "Yoon",
+     "vote": "carried",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam3-13",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 3, written blind by a reviewer",
+  "text": "Commissioner Abernathy moved to approve the rezoning request for 2210 Pecan Hollow Rd. from R-1 to C-2. Commissioner Lafleur seconded. After lengthy discussion and public comment from six residents, Commissioner Ostrowski moved to table the item until the December meeting, seconded by Commissioner Lafleur. Motion to table carried 4-1.",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Abernathy",
+     "seconder": "Lafleur",
+     "vote": null,
+     "result": null
+    },
+    {
+     "mover": "Ostrowski",
+     "seconder": "Lafleur",
+     "vote": "4-1-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam3-14",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 3, written blind by a reviewer",
+  "text": "| Item | Motion | 2nd | Vote | Result |\n|------|--------|-----|------|--------|\n| 4.1 Consent agenda | Brightwater | Imani Coles | 5-0 | Carried |\n| 4.2 Fence variance – 77 Birch Ln | Ruiz-Montoya | Coles | 2-3 | Failed |\n| 4.3 Reserve study RFP ($3,000–$4,500) | Hartigan | — | — | — |",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Brightwater",
+     "seconder": "Coles",
+     "vote": "5-0-0",
+     "result": "Carried"
+    },
+    {
+     "mover": "Ruiz-Montoya",
+     "seconder": "Coles",
+     "vote": "2-3-0",
+     "result": "Failed"
+    },
+    {
+     "mover": "Hartigan",
+     "seconder": null,
+     "vote": null,
+     "result": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam3-15",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 3, written blind by a reviewer",
+  "text": "Members present: Pemberton, Chen-Ludwig, Farrow, Iwasaki, O'Rourke, Tremblay.\nMr. O'Rourke moved, Ms. Iwasaki seconded, that the Society contribute $2,500 to the Riverside Food Pantry holiday drive. The motion passed with seven in favor, none opposed.",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "O'Rourke",
+     "seconder": "Iwasaki",
+     "vote": "7-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam3-16",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 3, written blind by a reviewer",
+  "text": "Upon motion by Dr. Haverford, second by Mrs. Kimura-Dale, the board approved the consent agenda (5-0). Upon motion by Mrs. Kimura-Dale, second by Mr. Ebbesen, the board approved the 8th grade field trip to Mammoth Cave, cost not to exceed $28/student (4-1, Haverford opposed). Upon motion by Mr. Ebbesen, second by Dr. Haverford, the board went into executive session at 8:40 p.m. under KRS 61.810(1)(f) (5-0).",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Haverford",
+     "seconder": "Kimura-Dale",
+     "vote": "5-0-0",
+     "result": "Carried"
+    },
+    {
+     "mover": "Kimura-Dale",
+     "seconder": "Ebbesen",
+     "vote": "4-1-0",
+     "result": "Carried"
+    },
+    {
+     "mover": "Ebbesen",
+     "seconder": "Haverford",
+     "vote": "5-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam3-17",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 3, written blind by a reviewer",
+  "text": "After the treasurer's report, the session moved on to new business. Elder Fontaine-Rousseau moved that the session approve use of the fellowship hall by Scout Troop 112 on Tuesdays, 6:30–8:00 pm. Deacon Mwangi seconded. Discussion followed regarding liability insurance; the clerk will contact the carrier. The session then moved on to the building & grounds report.",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Fontaine-Rousseau",
+     "seconder": "Mwangi",
+     "vote": null,
+     "result": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam3-18",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 3, written blind by a reviewer",
+  "text": "MOTION: Director Quintanilla-Reyes / SECOND: Director Oduya\nTo authorize the General Manager to execute a three-year contract with AquaMetrics, Inc. for meter reading services, not to exceed $186,000.\nAYES: 4 (Quintanilla-Reyes, Oduya, Brandt, Lemaire)   NOES: 0   ABSTAIN: 1 (Hsu)   ABSENT: 0\nMOTION PASSED.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Quintanilla-Reyes",
+     "seconder": "Oduya",
+     "vote": "4-0-1",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam3-19",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 3, written blind by a reviewer",
+  "text": "Attendees: Jordan Mahle (JM), Rosa Tierney (RT), Luis Ocampo (LO), Bea Sandoval-Hirsch (BSH)\n• Budget: JM/RT, approved 4-0\n• New logo: LO moved, no 2nd. dropped.\n• Volunteer appreciation dinner, ~$600: BSH/LO, approved",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Jordan Mahle",
+     "seconder": "Rosa Tierney",
+     "vote": "4-0-0",
+     "result": "Carried"
+    },
+    {
+     "mover": "Luis Ocampo",
+     "seconder": null,
+     "vote": null,
+     "result": "Died"
+    },
+    {
+     "mover": "Bea Sandoval-Hirsch",
+     "seconder": "Luis Ocampo",
+     "vote": "carried",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam3-20",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 3, written blind by a reviewer",
+  "text": "Moved by Councilor Aguilar-Benton, seconded by Councilor Price, to direct staff to draft an ordinance phasing out gas-powered leaf blowers by 2028. Vote: 3-3 (Councilor Nwachukwu absent). Motion fails on a tie.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Aguilar-Benton",
+     "seconder": "Price",
+     "vote": "3-3-0",
+     "result": "Failed"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam3-21",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 3, written blind by a reviewer",
+  "text": "The chair recognized Ms. Lindgren, who spoke at length about the condition of the playground equipment at Hawthorne Park, noting that two of the slides had been cordoned off since July and that the manufacturer's warranty had lapsed in 2024. Several members asked about the timeline; Ms. Lindgren said the vendor quoted 6–8 weeks for delivery. Mr. Esposito-Grant then moved to allocate up to $9,750 from the capital reserve for replacement equipment, and Ms. Lindgren seconded (correction per the secretary: the second was made by Mr. Achebe, as Ms. Lindgren had stepped out). The motion carried on a voice vote.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Esposito-Grant",
+     "seconder": "Achebe",
+     "vote": "carried",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam3-22",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 3, written blind by a reviewer",
+  "text": "Motion by Trustee Kessler to approve payment of bills totaling $48,912.37. Carried.\nMotion by Trustee Ahn, supported by Trustee Delgado-Marsh, to adopt the 2027 township fee schedule. Roll call vote: Ahn yes, Delgado-Marsh yes, Kessler yes, Supervisor Brodeur yes, Clerk Whitaker no. Motion carried 4-1.",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Kessler",
+     "seconder": null,
+     "vote": "carried",
+     "result": "Carried"
+    },
+    {
+     "mover": "Ahn",
+     "seconder": "Delgado-Marsh",
+     "vote": "4-1-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam3-23",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 3, written blind by a reviewer",
+  "text": "The item regarding the Halsted Street protected bike lane was moved to the Committee on Pedestrian and Traffic Safety. Ald. Szczepański moved to approve the 47th Ward participatory budgeting allocations ($1.5M), Ald. Ní Bhriain seconded. Passed by unanimous voice vote.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Szczepański",
+     "seconder": "Ní Bhriain",
+     "vote": "unanimous",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam3-24",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 3, written blind by a reviewer",
+  "text": "Present: Commissioners Salcido, Trujillo-Baca, Montoya, Archuleta. Absent: Commissioner Gallegos.\nCommissioner Montoya moved to approve the County Road 41 grading agreement ($14,000–$17,500); seconded by Commissioner Gallegos. Motion carried 4-0.",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Montoya",
+     "seconder": "Gallegos",
+     "vote": "4-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "redteam3-25",
+  "org": "made-up",
+  "type": "redteam",
+  "source": "redteam",
+  "url": null,
+  "note": "adversarial case, round 3, written blind by a reviewer",
+  "text": "7 members present; quorum confirmed 7:05.\nMotion picture night planning moved to spring.\nMotion to approve revised bylaws Art. IV §2 (Gutiérrez, Fairbanks-Lowe). Vote: Y-6 N-0 A-1. Passed.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Gutiérrez",
+     "seconder": "Fairbanks-Lowe",
+     "vote": "6-0-1",
+     "result": "Carried"
+    }
+   ]
+  }
  }
 ]

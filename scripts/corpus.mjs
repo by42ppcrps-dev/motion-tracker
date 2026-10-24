@@ -35,6 +35,7 @@ const rows = corpus.map(c => ({ c, why: grade(c) }));
 const pass = rows.filter(r => !r.why.length).length;
 const real = rows.filter(r => r.c.source === "real"), realPass = real.filter(r => !r.why.length).length;
 const falseReady = rows.filter(r => !r.c.expect.ready && check(r.c.text).ready).length;
-console.log(`corpus: ${pass}/${rows.length} cases pass (${Math.round(100 * pass / rows.length)}%); real minutes ${realPass}/${real.length}; false "Ready" ${falseReady}`);
+const rt = rows.filter(r => r.c.source === "redteam"), rtPass = rt.filter(r => !r.why.length).length;
+console.log(`corpus: ${pass}/${rows.length} cases pass (${Math.round(100 * pass / rows.length)}%); real minutes ${realPass}/${real.length}; adversarial ${rtPass}/${rt.length}; false "Ready" ${falseReady}`);
 if (process.argv.includes("--verbose")) for (const r of rows) if (r.why.length) console.log(` x ${r.c.id}: ${r.why.join("; ")}`);
 export const summary = { pass, total: rows.length, falseReady };

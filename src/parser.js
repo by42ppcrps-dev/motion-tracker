@@ -6,12 +6,12 @@
  * When it can't be sure, it flags instead of saying Ready.
  */
 const cc = w => w.split(" ").map(x => `[${x[0].toUpperCase()}${x[0].toLowerCase()}]${x.slice(1)}`).join("\\s+");
-const TITLE_LIST = ["Mayor Pro Tem", "Vice Mayor", "Vice President", "Vice Chair", "Board Member", "Councilmembers", "Councilmember", "Councilman", "Councilwoman", "Councilor", "Councillor", "Council Member", "Members", "Member", "Mayor", "President", "Chairman", "Chairwoman", "Chairperson", "Chair", "Commissioner", "Alderman", "Alderwoman", "Alderperson", "Selectman", "Selectwoman", "Supervisor", "Trustees", "Trustee", "Directors", "Director", "Secretary", "Treasurer", "Superintendent", "Delegate", "Elder", "Deaconess", "Deacon", "Sister", "Brother", "Pastor", "Reverend", "Rev", "Father", "Fr", "Rabbi", "Cllr", "Officer", "Mrs", "Mr", "Ms", "Mx", "Dr"];
+const TITLE_LIST = ["Mayor Pro Tem", "Vice Mayor", "Vice President", "Vice Chair", "Board Member", "Councilmembers", "Councilmember", "Councilman", "Councilwoman", "Councilor", "Councillor", "Council Member", "Members", "Member", "Mayor", "President", "Chairman", "Chairwoman", "Chairperson", "Chair", "Commissioner", "Alderman", "Alderwoman", "Alderperson", "Selectmen", "Selectman", "Selectwoman", "Supervisor", "Trustees", "Trustee", "Directors", "Director", "Secretary", "Treasurer", "Superintendent", "Delegate", "Dir", "Ald", "Comm", "Cmsr", "Clerk", "Rep", "Sen", "Pres", "Treas", "Elder", "Deaconess", "Deacon", "Sister", "Brother", "Pastor", "Reverend", "Rev", "Father", "Fr", "Rabbi", "Cllr", "Officer", "Mrs", "Mr", "Ms", "Mx", "Dr"];
 const TITLE = `(?:(?:${TITLE_LIST.map(cc).join("|")})\\.?,?\\s+)`;
 const STOP = "Motion|Motioned|Moved|Move|Seconded|Second|Vote|Voting|Votes|Aye|Ayes|Nay|Nays|Noes|Yea|Yeas|Yes|No|All|The|This|That|It|A|An|Passed|Carried|Approved|Failed|Roll|Result|Resolution|Resolved|Abstain|Abstained|Absent|Opposed|In|And|Discussion|Amendment|Main|Substitute|Board|Council|Committee|Action|Recommended|Upon|On|With|Given|There|After|Then|So|Finally|Also|Is|Opposed|Next|Unanimous|Unanimously|Quorum|Minutes|Agenda";
 const NOT_WORD = `(?!(?:${STOP}|${STOP.toUpperCase()}|${TITLE_LIST.join("|")})\\b(?!\\.))`;
-const UP = "A-ZÀ-ÖØ-Þ", LO = "a-zß-öø-ÿ";
-const NW = `${NOT_WORD}(?:St\\.[ \\t]?[${UP}][${UP}${LO}'’-]*|[${UP}]\\.|(?:Mc|Mac|O['’])?[${UP}][${UP}${LO}'’-]*[${UP}${LO}]|(?:van|von|der|den|de|del|della|da|di|du|la|le)(?=[ \\t]+[${UP}]))`;
+const UP = "A-ZÀ-ÖØ-ÞĀ-ž", LO = "a-zß-öø-ÿĀ-ž";
+const NW = `${NOT_WORD}(?:St\\.[ \\t]?[${UP}][${UP}${LO}'’-]*|[${UP}]\\.|(?:Mc|Mac|O['’])?[${UP}][${UP}${LO}'’-]*[${UP}${LO}]|(?:van|von|der|den|de|del|della|da|di|du|la|le)(?=(?:[ \\t]+(?:van|von|der|den|de|del|della|da|di|du|la|le))*[ \\t]+[${UP}]))`;
 const NAME = `((?:[Tt]he\\s+(?:Chair(?:man|woman|person)?|President|Mayor))|${NW}(?:[ \\t]+${NW}){0,4})`;
 const LNAME = `(?!(?:none|n\\/a|na|tbd|the|board|all)\\b)([a-z][a-z'’-]+(?:[ \\t][a-z][a-z'’-]+)?|${NW}(?:[ \\t]+${NW}){0,3})`;
 const ADV = `(?:\\s+(?:then|also|again|subsequently|immediately|further|formally|finally))?`;
@@ -36,15 +36,18 @@ const STARTS = [
   { kind: "attr", field: true, re: new RegExp(`(?<=^|\\n)[ \\t]*(?:Moved|MOVED|Mover|MOVER|MVD)\\s*:\\s*${WHO}`, "g") },
   { kind: "full", pair: true, re: new RegExp(`\\b[Mm]otion\\s*\\(\\s*${NAME}\\s*\\/\\s*${NAME}\\s*\\)`, "g") },
   { kind: "full", speaker: true, re: /(?<=^|\n)[ \t]*(?:[A-Z]+[ \t]+)?([A-Z][A-Z'’-]+):[ \t]*(?=(?:So moved|I so move|I(?:'ll| will)? move|Move (?:approval|to)|I make (?:a|the) motion)\b)/g },
-  { kind: "auto", lower: true, re: /(?<=^|\n)[ \t]*(?:[-•*]|\d+[.)])?[ \t]*(?!(?:the|board|council|it|we|they|he|she|meeting|item|chair|committee|group|everyone|staff|motion)\b)([a-z][a-z'’-]+(?:[ \t][a-z][a-z'’-]+)?)[ \t]+(?:moved|motioned|moves)(?=[ \t]+(?:to|that)\b)/g },
+  { kind: "auto", lower: true, re: /(?<=^|\n|[.!?]\s|[-–—]\s)[ \t]*(?:[-•*]|\d+[.)])?[ \t]*(?:(?:mr|mrs|ms|dr)\.?[ \t]+)?(?!(?:the|board|council|it|we|they|he|she|meeting|item|chair|committee|group|everyone|staff|motion)\b)([a-z][a-z'’-]+(?:[ \t][a-z][a-z'’-]+)?)[ \t]+(?:moved|motioned|moves)(?=[ \t]+(?:to|that)\b|,)/g },
+  { kind: "ms", names: true, re: new RegExp(`(?<=:\\s*|^|\\n|[•*-]\\s*)\\b([A-Z]{2,4}|${NW})\\/([A-Z]{2,4}|${NW})(?=,?\\s+(?:approved|carried|passed|failed|unan|\\d{1,2}-\\d))`, "g") },
   { kind: "ms", re: new RegExp(`\\b[Mm]\\/[Ss](?:\\/[CcPpFf])?\\b:?\\s*\\(?\\s*${NAME}\\s*\\/\\s*${NAME}\\s*\\)?`, "g"), names: true },
   { kind: "ms", re: /\b[Mm]\/[Ss]\/[CcPpFf]\b/g },
   { kind: "label", re: /(?<=^|\n|[.;!?:]\s{1,3})[ \t]*(?:RECOMMENDED\s+|Recommended\s+)?(?:MOTION|[Mm]otion|MOT|[Mm]tn|MTN)\b\s*(?:#\s*\d+\s*)?(?::|-\s|to\b)(?!\s*\w+(?:\s+\w+)?\s+(?:carried|carries|passed|failed|was\s+(?:approved|carried|defeated)|vote)\b)/g },
   { kind: "main", re: /\b(?:[Mm]ain\s+[Mm]otion|[Mm]otion(?=,?\s+as\s+amended))(?=,?(?:\s+as\s+amended,?)?(?:\s+then)?\s+(?:[Vv]ote|[Pp]assed|[Cc]arried|[Ff]ailed|was))/g },
 ];
 const SECOND = [
-  new RegExp(`[Ss]econd(?:ed)?\\s+(?:by|from):?\\s+${WHO}`),
-  new RegExp(`(?:[Ss]econd(?:ed|er)?|SECOND(?:ED)?|2ND|2nd)\\s*:\\s*${WHO}`),
+  new RegExp(`\\bthe\\s+second\\s+was\\s+(?:actually\\s+)?(?:made|given|offered)\\s+by\\s+${WHO}`),
+  new RegExp(`(?:[Ss]econd(?:ed)?|[Ss]upported)\\s+(?:by|from):?\\s+${WHO}`),
+  new RegExp(`(?:[Ss]econded\\s+by|\\b2nd(?:ed)?(?:\\s+by)?)\\s+(?:(?:mr|mrs|ms|dr)\\.?\\s+)?${LNAME}`),
+  new RegExp(`(?:[Ss]econd(?:ed|er)?|SECOND(?:ED)?|2ND|2nd|[Ss]upport(?:ed)?)\\s*:[ \\t]*${TITLE.replace("\\s+", "[ \\t]+")}*${NAME}`),
   /(?:^|[,;.]|\n)\s*(?!(?:the|board|it|motion|no)\b)([a-z][a-z'’-]+(?:[ \t][a-z][a-z'’-]+)?)\s+(?:seconded|2nd)\b/m,
   /(?<=^|\n)[ \t]*(?:[A-Z]+[ \t]+)?([A-Z][A-Z'’-]+):[ \t]*(?:Second(?:ed)?|I(?:'ll| will)? second)\b/,
   new RegExp(`\\b2nd(?:ed)?\\s+by\\s+${WHO}`),
@@ -54,13 +57,14 @@ const SECOND = [
   new RegExp(`${WHO}${APPOS}\\s+(?:seconded|seconds|2nd)\\b`),
 ];
 const MOVER = [
+  new RegExp(`(?:^|\\n)[ \\t]*(?:MOTION|[Mm]otion)(?:\\s+(?:BY|[Bb]y))?\\s*:[ \\t]*${TITLE.replace("\\s+", "[ \\t]+")}*${NAME}[ \\t]*(?=\\n|$)`),
   new RegExp(`(?:[Mm]over|MOVER|MVD)\\s*:\\s*${WHO}`), new RegExp(`(?:[Mm]oved|MOVED)\\s*:\\s*${WHO}`), new RegExp(`(?:^|\\s)[Mm]\\s*:\\s*${LNAME}`),
   new RegExp(`[Mm]otion\\s+to\\s+[^;\\n]{1,100}?\\s(?:made\\s+)?by\\s+${WHO}(?=,?\\s+(?:second|2nd))`),
 ];
 const GROUP_SECOND = /\bseconded\s+by\s+(?:all|the\s+board|everyone|everybody|all\s+members|members)\b/i;
 
 /* ---------- text prep ---------- */
-const SENT = /(?<![\s(](?:Mr|Ms|Mrs|Dr|St|No|Jr|Sr|Mt|Ft))(?<=[A-Za-z0-9)\]'’"]{2}[.;!?])\s|\n/;
+const SENT = /(?<![\s(](?:Mr|Ms|Mrs|Dr|St|No|Jr|Sr|Mt|Ft|Art|Sec|Secs|Ord|Res|Nos|vs|etc|Inc|Co|Corp|Ltd|approx|est|Ave|Rd|Blvd|Dir|Ald|Hon|Rev|Cllr|Gov|Dept|Ch|Para|Ref)\.)(?<=[A-Za-z0-9)\]'’"]{2}[.;!?])\s|\n/;
 const FIELD_START = /^(?:Motion|MOTION|Moved|Seconded|Second|Vote|Voting|Ayes?|AYES?|Nays?|NAYS?|Noes|NOES|Roll|Result|Passed|Carried|Failed|All\s+in\s+favou?r|M\/S|m\/s|Amendment|Main\s+motion|RESOLUTION|ACTION|Absent|ABSENT|\d+(?:\.\d+)*\.?\s|[-•●*]\s)/;
 const LABEL_LINE = /^[A-Z0-9][A-Za-z0-9]{1,12}(?:[ \t][A-Za-z]+)?[ \t]*:[ \t]/;
 const COLS = { text: /^(?:motion|item|action|description|subject)/i, mover: /^(?:moved|mover|motion\s+by|made\s+by|by)/i, seconder: /^(?:second(?:ed|er)?|2nd)/i, vote: /^(?:vote|tally|count)/i, result: /^(?:result|outcome|status|disposition)/i };
@@ -71,6 +75,7 @@ function untable(lines) {
     const cells = l => l.replace(/^\s*\||\|\s*$/g, "").split("|").map(c => c.trim());
     const head = lines[i].includes("|") ? cells(lines[i]) : null;
     const map = head && head.map(h => Object.keys(COLS).find(k => COLS[k].test(h)) || null);
+    if (map && !map.includes("mover") && map.filter(x => x === "text").length > 1) { const k = map.lastIndexOf("text"); if (/^motion/i.test(head[k])) map[k] = "mover"; }
     if (!map || !map.includes("text") || !map.includes("mover")) { out.push(lines[i]); continue; }
     let j = i + 1;
     for (; j < lines.length && lines[j].includes("|"); j++) {
@@ -83,7 +88,7 @@ function untable(lines) {
   return out;
 }
 function prep(text) {
-  const lines = untable(String(text ?? "").replace(/\r\n?/g, "\n").replace(/\u00a0/g, " ").split("\n")).map(l => l.replace(/\s+/g, " ").trim());
+  const lines = untable(String(text ?? "").replace(/\r\n?/g, "\n").replace(/[ \t]+\/[ \t]+(?=[A-Z][A-Za-z0-9]{1,12}[ \t]*:|(?:Moved|Seconded|Second|Vote|Motion|To|Ayes|AYES)\b)/g, "\n").replace(/\u00a0/g, " ").split("\n")).map(l => l.replace(/\s+/g, " ").trim());
   let out = "";
   for (let i = 0; i < lines.length; i++) {
     const l = lines[i];
@@ -92,15 +97,17 @@ function prep(text) {
     const prev = lines[i - 1];
     if (/[a-z]-$/.test(prev) && /^[a-z]/.test(l)) { out = out.slice(0, -1) + l; continue; }
     const soft = (prev.length >= 45 && !/[.:;!?]$/.test(prev)) || /\b(?:[A-Z]|Mr|Ms|Mrs|Dr)\.$/.test(prev) || /,$/.test(prev);
-    out += (soft && !FIELD_START.test(l) && !LABEL_LINE.test(l)) ? " " + l : "\n" + l;
+    out += (soft && !FIELD_START.test(l) && !LABEL_LINE.test(l) && !(LABEL_LINE.test(prev) && prev.length < 60)) ? " " + l : "\n" + l;
   }
   return out.trim();
 }
 
 /* ---------- names ---------- */
 const TITLE_RE = new RegExp(`^${TITLE}+`);
+let ALIASES = {};
 function cleanName(s) {
   if (!s) return null;
+  if (ALIASES[s.trim()]) return ALIASES[s.trim()];
   let n = s.replace(/\s+/g, " ").trim().replace(TITLE_RE, "").trim();
   if (/^the\s/i.test(n)) return "the " + n.split(" ").slice(1).join(" ");
   if ((n === n.toUpperCase() && /[A-Z]{2}/.test(n)) || n === n.toLowerCase()) n = n.toLowerCase().replace(/(^|[\s'’-])([a-z])/g, (_, a, c) => a + c.toUpperCase());
@@ -126,7 +133,7 @@ function listCount(list) {
   if (/^all\b/i.test(t)) return "all";
   return t.split(/\s*,\s*|\s+and\s+|\s*&\s*/).filter(x => /[A-Za-z]/.test(x)).length;
 }
-const UNANIMOUS = /\bunanimous(?:ly)?\b|\ball\s+(?:were\s+|are\s+)?in\s+favou?r\b(?![?])(?!,?\s+opposed\?)|\ball\s+(?:members\s+)?(?:present\s+)?voted\s+(?:aye|yes|in\s+favou?r)\b|\ball\s+(?:agreed|approved|ayes?)\b|\ball\s+voting\s+affirmatively\b|\bAYES?:\s*All\b|\bwithout\s+objection\b|\bno\s+objections?\b|\bby\s+(?:general\s+)?consent\b|\bnobody\s+(?:against|opposed)\b/i;
+const UNANIMOUS = /\bunanimous(?:ly)?\b|\ball\s+(?:were\s+|are\s+)?in\s+favou?r\b(?![?])(?!,?\s+opposed\?)|\ball\s+(?:members\s+)?(?:present\s+)?voted\s+(?:aye|yes|in\s+favou?r)\b|\ball\s+(?:agreed|approved|ayes?)\b|\ball\s+voting\s+affirmatively\b|\bAYES?:\s*All\b|\bwithout\s+objection\b|\bno\s+objections?\b|\bby\s+(?:general\s+)?consent\b|\bnobody\s+(?:against|opposed)\b|\b[Cc]\s+unan\b|\bunan\b\.?/i;
 function readVote(s) {
   const out = (f, a, b, how) => ({ for: f, against: a ?? 0, abstain: b ?? 0, unanimous: UNANIMOUS.test(s) && !a && !b, how });
   const named = (s.match(new RegExp(`${WHO}\\s+abstain(?:ed|s|ing)\\b`, "g")) || []).length;
@@ -140,7 +147,7 @@ function readVote(s) {
   // b) 5-1-0 / 4:0 next to a vote word
   const m = s.match(/(?:\bvote[ds]?|\bvoting|\bcarried|\bpassed|\bfailed|\bapproved|\badopted|\bdefeated|\bunanimous(?:ly)?|\btally|\broll\s+call)[^.\n\d]{0,25}?(\d{1,2})\s*[-–:]\s*(\d{1,2})(?:\s*[-–:]\s*(\d{1,2}))?(?![\d:\-–]|\s*(?:[ap]\.?\s?m\b|[AP]M\b))/i)
     || s.match(/(?<![\d:$#.,])\b(\d{1,2})\s*[-–]\s*(\d{1,2})(?:\s*[-–]\s*(\d{1,2}))?\b(?=,?\s*(?:carried|passed|failed|vote|motion\s+(?:carried|passed|failed)))/i)
-    || s.match(/(?:^|[.;:]\s+|\n)\s*(\d{1,2})\s*[-–]\s*(\d{1,2})(?:\s*[-–]\s*(\d{1,2}))?(?=\s*(?:\([^)]*(?:opposed|abstain|absent|dissent|nay|no\b)[^)]*\)|[.;]|$))/im);
+    || s.match(/(?:^|[.;:,(]\s*|\n)\s*(\d{1,2})\s*[-–]\s*(\d{1,2})(?:\s*[-–]\s*(\d{1,2}))?(?=\s*(?:\([^)]*(?:opposed|abstain|absent|dissent|nay|no\b)[^)]*\)|,\s*[A-Z][\w'’-]+\s+(?:opposed|abstain\w*|dissent\w*|voting\s+no)|[.;)]|$))/im);
   if (m) return out(+m[1], +m[2], m[3] != null ? +m[3] : 0, "count");
   // c) roll calls: "AYES: a, b and c NOES: d", "a, b and c voted aye", "with a, b voting in favor and c voting against"
   const ay = s.match(/\b(?:voting\s+)?(?:AYES?|Ayes?|YEAS?|Yeas?)\s*:\s*([^\n.;]*?)(?=\s*(?:\bNOES\b|\bNAYS?\b|\bNoes\b|\bNays?\b|\bABSENT\b|\bAbsent\b|\bABSTAIN|\bAbstain|\bMotion\b|[.;\n]|$))/);
@@ -171,7 +178,7 @@ function readVote(s) {
 }
 function readResult(s) {
   if (/\bwithdr[ae]wn?\b|\bwithdrew\b/i.test(s)) return "Withdrawn";
-  if (/\bdie[ds]?\s+for\s+(?:lack|want)\s+of\s+a\s+second\b|\bno\s+second\s+was\s+(?:made|heard|offered)\b|\bfailed\s+for\s+lack\s+of\s+a\s+second\b|\bdied\b[^.\n]{0,20}\bno\s+(?:2nd|second)\b|\bs\s*:\s*none\b/i.test(s)) return "Died";
+  if (/\bdie[ds]?\s+for\s+(?:lack|want)\s+of\s+a\s+second\b|\bno\s+second\s+was\s+(?:made|heard|offered)\b|\bfailed\s+for\s+lack\s+of\s+a\s+second\b|\bdied\b[^.\n]{0,20}\bno\s+(?:2nd|second)\b|\bs\s*:\s*none\b|\bno\s+(?:2nd|second(?:er)?)\b(?!\s+(?:reading|meeting|item|motion))/i.test(s)) return "Died";
   const fail = s.search(/\b(?:failed|fails|defeated|died|dies|lost)\b|\bM\/S\/F\b/i);
   const pass = s.search(/\b(?:carried|carries|passed|passes|adopted|approved)\b|\b(?:was|were)\s+accepted\b|\bM\/S\/[CP]\b/i);
   if (fail >= 0 && (pass < 0 || fail < pass)) return "Failed";
@@ -201,6 +208,8 @@ function probe(seg) {
 
 export function parseMotions(text) {
   const t = prep(text);
+  ALIASES = {};
+  for (const a of t.matchAll(new RegExp(`(${NW}(?:[ \\t]+${NW}){1,3})\\s*\\(([A-Z]{2,4})\\)`, "g"))) ALIASES[a[2]] = a[1];
   const starts = findStarts(t);
   let segs = [];
   starts.forEach((h, i) => {
@@ -210,7 +219,8 @@ export function parseMotions(text) {
     if (h.kind === "ms") from = sentenceStart(t, h.idx, prevEnd);
     const to = i + 1 < starts.length ? starts[i + 1].idx : t.length;
     if (segs.length && from < segs[segs.length - 1].to) segs[segs.length - 1].to = from;
-    segs.push({ h, from, to, pre: h.kind === "ms" ? t.slice(lineStart(t, from, prevEnd), from).trim() : "" });
+    const para = Math.max(prevEnd, t.lastIndexOf("\n\n", from - 1) + 1);
+    segs.push({ h, from, to, pre: (h.kind === "ms" ? t.slice(lineStart(t, from, prevEnd), from) : t.slice(para, from)).trim() });
   });
   segs = segs.filter(s => s.to > s.from || s.h.kind === "ms");
   // a segment that already has a vote/result ends at the next blank line
@@ -261,7 +271,9 @@ export function parseMotions(text) {
     const ms = (s.h.kind === "ms" && s.h.names) || s.h.pair ? s.h.m : (s.extra && s.extra.h.kind === "ms" && s.extra.h.names ? s.extra.h.m : null);
     let mover = s.who || firstMatch(MOVER, body) || (ms ? cleanName(ms[1]) : null);
     if (s.h.self && !s.who) mover = null;
-    let seconder = firstMatch(SECOND, body) || (ms ? cleanName(ms[2]) : null);
+    const pp = !mover && body.split(SENT)[0].match(new RegExp(`\\(\\s*${TITLE}*${NAME}\\s*[,/;]\\s*${TITLE}*${NAME}\\s*\\)`));
+    if (pp && !s.h.self) mover = cleanName(pp[1]);
+    let seconder = firstMatch(SECOND, body) || (pp ? cleanName(pp[2]) : null) || (ms ? cleanName(ms[2]) : null);
     if (seconder && GROUP_SECOND.test(body)) seconder = null;
     let v = readVote(rest);
     let result = readResult(rest) ?? resultFromVote(v);
@@ -294,19 +306,29 @@ function trimClause(c) {
     .replace(/,?\s*(?:and\s+)?seconded\b.*$/i, "")
     .replace(/,\s*(?:\S+\s+){0,3}(?:seconded|seconding|second|2nd)\b.*$/i, "")
     .replace(/\s*\((?:carried|passed|approved|failed|vote)[\s\S]*$/i, "")
+    .replace(/,\s*\d{1,2}\s*[-–]\s*\d{1,2}\b.*$/, "")
+    .replace(/\s*\(\s*\d{1,2}\s*[-–]\s*\d{1,2}\b[\s\S]*$/, "")
+    .replace(/\s+[-–—]\s+(?:2nd|second|seconded|vote|passed|carried|failed)\b.*$/i, "")
     .replace(/,\s*(?:which\s+|and\s+)?(?:passed|carried|approved|failed|defeated|all\s+in\s+favou?r|unanimous)\b.*$/i, "")
     .replace(/\s+(?:made\s+)?by\s+[A-Z][\w'’-]+(?:\s+[A-Z][\w'’-]+)?$/, "")
     .replace(/[.,;:]$/, "").trim() || null;
 }
 function displayText(s, body) {
   let w = s.what;
-  if (!w && s.pre) w = s.pre.split(SENT).filter(x => x.trim()).pop();
-  if (!w && s.h.kind !== "ms") {
-    const after = body.slice(Math.max(0, s.h.end - s.from)).replace(new RegExp(`^\\s*,?\\s*(?:and\\s+)?(?:was\\s+)?seconded\\s+by\\s+${WHO}\\s*,?`), "").replace(/^[\s,:;]*(?:as follows:?)?\s*/i, "");
-    w = after.split(SENT)[0];
+  let after = "", follows = false;
+  if (s.h.kind !== "ms") {
+    after = body.slice(Math.max(0, s.h.end - s.from)).replace(new RegExp(`^\\s*,?\\s*(?:and\\s+)?(?:was\\s+)?seconded\\s+by\\s+${WHO}\\s*,?`), "");
+    follows = /^[\s,]*(?:as\s+follows|:)/i.test(after);
+    after = after.replace(/^[\s,:;]*(?:as follows:?)?\s*/i, "").split(SENT)[0];
   }
+  if (!w && follows) w = after;
+  if (!w && s.pre) {
+    const ask = s.pre.match(/\bmotion\s+to\s+([^?.\n]+)/i);
+    w = ask ? ask[1] : s.pre.split(SENT).filter(x => x.trim()).pop();
+  }
+  if (!w) w = after;
   if (!w) w = body.replace(/^\s*(?:RECOMMENDED\s+)?motion\s*(?:#\s*\d+\s*)?:?\s*/i, "").split(SENT)[0];
-  w = (w || "").replace(/\s*\(?\b[Mm]\/[Ss]\b[\s\S]*$/, "").replace(/^(?:to|that)\s+/i, "").replace(/\s+/g, " ").trim().replace(/[.,;:]$/, "");
+  w = (w || "").replace(/\s*\(?\b[Mm]\/[Ss]\b[\s\S]*$/, "").replace(/[:\s]+[^\s/]+\/[^\s/]+,?\s+(?:approved|carried|passed|failed|unan|\d{1,2}-\d)[\s\S]*$/, "").replace(/^\s*(?:[-•*]|\d+(?:\.\d+)*[.)]?)\s+/, "").replace(/^(?:to|that)\s+/i, "").replace(/\s*\([A-Z][^()]{0,40}[,/][^()]{0,40}\)\s*$/, "").replace(/\s+/g, " ").trim().replace(/[.,;:]$/, "");
   return w.length > 140 ? w.slice(0, 137).replace(/\s\S*$/, "") + "…" : w || "(motion)";
 }
 
@@ -338,14 +360,22 @@ function presentCount(t) {
   const m = t.match(new RegExp(`\\b${NUM}\\s+of\\s+(?:the\\s+)?\\d{1,2}\\s+(?:${BODY}\\s+)?(?:were\\s+)?present\\b`, "i"))
     || t.match(new RegExp(`\\bpresent\\s*(?::\\s*${NUM}\\s+of\\s+\\d{1,2}|\\(\\s*${NUM}(?:\\s+of\\s+\\d{1,2})?\\s*\\))`, "i"))
     || t.match(new RegExp(`\\b${NUM}\\s+${BODY}\\s+(?:were\\s+)?present\\b`, "i"));
-  if (!m) return null;
-  const n = num(m.slice(1).find(Boolean));
-  return n > 0 ? n : null;
+  if (m) { const n = num(m.slice(1).find(Boolean)); return n > 0 ? n : null; }
+  const tags = (t.match(/\((?:present|here)\)/gi) || []).length;
+  if (tags >= 2) return tags;
+  const l = t.match(/(?:^|\n|\.\s)[ \t]*(?:(?:[Mm]embers|[Tt]rustees|[Dd]irectors|[Cc]ommissioners|[Bb]oard\s+[Mm]embers|[Cc]ouncil(?:\s+[Mm]embers)?)\s+)?(?:[Pp]resent|PRESENT)\s*(?:\(\d+\))?\s*(?:[:—–]|-\s)\s*([^\n;]+?)(?=\.\s|\.$|\s+(?:Absent|ABSENT|Also|Staff)\b|\n|$)/);
+  if (l) {
+    const items = l[1].split(/\s*,\s*|\s+and\s+|\s*&\s*/).map(x => x.replace(/^and\s+/, "").trim()).filter(Boolean);
+    if (items.length >= 2 && items.every(x => x.split(/\s+/).length <= 4 && /^[A-Z]/.test(x))) return items.length;
+  }
+  return null;
 }
 function absentNames(t) {
+  const out = [];
+  for (const a of t.matchAll(new RegExp(`${WHO}\\s*(?:\\(absent\\)|[ \\t]+(?:was\\s+)?absent\\b)`, "g"))) out.push(cleanName(a[1]));
   const m = t.match(/\b(?:[Aa]bsent|ABSENT)\s*(?:\(\d+\))?\s*(?:[:—–]|-\s)\s*([^\n.;]+)/);
-  if (!m || /^\s*(?:none|no\s+one|0)\b/i.test(m[1])) return [];
-  return m[1].split(/\s*,\s*|\s+and\s+/).map(x => cleanName(x.replace(new RegExp(`^${TITLE}+`), ""))).filter(x => x && /^[A-Z]/.test(x));
+  if (!m || /^\s*(?:none|no\s+one|0)\b/i.test(m[1])) return out.filter(Boolean);
+  return out.filter(Boolean).concat(m[1].split(/\s*,\s*|\s+and\s+/).map(x => cleanName(x.replace(new RegExp(`^${TITLE}+`), ""))).filter(x => x && /^[A-Z]/.test(x)));
 }
 const ORPHAN = /\bseconded\b|\bm\/s\b|\bmade\s+(?:a|the)\s+motion\b|\bmoved\s+(?:by|that)\b|\bI\s+move\b/i;
 export function check(text) {
