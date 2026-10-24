@@ -8,7 +8,7 @@ For volunteer board secretaries: paste notes, see every motion and its gaps. Sou
 ## The Core Journey
 1. Open the page; a text box with "Try sample notes" button.
 2. Paste notes (or load sample), press **Check motions**.
-3. See a table: motion text, mover, seconder, vote (for/against/abstain), result, status.
+3. See a table: motion text, mover, seconder, vote (for/against/abstain), result.
 4. Missing pieces are red with a plain fix tip ("Add who seconded").
 5. Edit notes, re-check; when all rows are complete a green "Ready for minutes" banner shows and **Copy summary** is enabled.
 
@@ -30,7 +30,7 @@ Parliamentary starts ("Motion to", "Motion by", "Moved by", "Dana Ruiz moved to"
 - [ ] Copies one line per motion: "Motion to X. Moved: A. Seconded: B. Vote 5-1-0. Carried."
 
 ## States and Boundaries
-- **Empty**: "No motions found." with a hint naming the phrasings that start a motion ("Motion to", "Moved by", "moves to").
+- **Empty**: "No motions found." with a hint naming the phrasings that start a motion ("Motion to", "Moved by", "Dana Ruiz moved to").
 - **Nothing stored**: notes are processed per request and discarded.
 
 ## Product Decisions

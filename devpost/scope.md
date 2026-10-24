@@ -21,7 +21,7 @@ Calm, paper-like, clerk's ledger. Plain words, no AI hype.
 LumeGrid already does paid meeting minutes for HOAs; secretaries' #1 miss is unrecorded movers/seconders.
 
 ## What "Working" Looks Like
-Paste a messy sample, see 4 motions, 1 flagged "no seconder" in red, fix one line, it turns green and "Ready for minutes" lights up.
+Paste a messy sample, see 4 motions with 3 gaps in red (no seconder, no vote, no mover), fix those lines, it turns green and "Ready for minutes" lights up.
 
 ## The POC Boundary
 Text in, motion table + gap flags + copyable summary out. Runs in a browser, no account, nothing stored.

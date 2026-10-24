@@ -39,7 +39,7 @@ motion-tracker/
 ├── public/index.html # UI
 ├── test/parser.test.js
 ├── test/ui.test.js
-├── devpost/          # scope, prd, spec, learner profile
+├── devpost/          # scope, prd, spec
 ├── wrangler.toml
 └── LICENSE           # MIT
 ```

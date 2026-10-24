@@ -7,7 +7,7 @@ Paste board meeting notes; see every motion with its mover, seconder and vote, a
 ```
 npm install
 npx wrangler dev      # Node 22+, open http://localhost:8787
-npm test              # parser tests
+npm test              # parser and UI tests
 ```
 ## How it works
 `src/parser.js` finds motion blocks line by line, extracts mover / seconder / vote / result with plain pattern rules, and flags gaps. `src/worker.js` serves the page and `POST /api/check`. No AI calls, no keys, no storage.
