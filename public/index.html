@@ -6,13 +6,20 @@ textarea{width:100%;height:220px;font:15px/1.45 ui-monospace,monospace;padding:1
 button{font:inherit;padding:9px 18px;border:1px solid #222;background:#222;color:#faf6ec;cursor:pointer;margin:10px 8px 0 0}button.alt{background:transparent;color:#222}
 button:disabled{opacity:.4;cursor:default}table{width:100%;border-collapse:collapse;margin-top:12px;background:#fffdf7}
 th,td{border-bottom:1px solid #e3d9c0;padding:8px;text-align:left;vertical-align:top}.gap{color:#b3261e;font-weight:600}.tip{color:#b3261e;font-size:14px}
+.warn{color:#8a5a00;font-weight:600}details{margin-top:22px;background:#fffdf7;border:1px solid #e3d9c0;padding:10px 14px}details summary{cursor:pointer;font-weight:600}details li{margin:2px 0}code{font-size:14px;background:#f3ecdb;padding:0 3px}
 .banner{padding:12px 16px;margin-top:18px;border-left:6px solid}.ok{border-color:#1e7a3c;background:#e6f3ea}.no{border-color:#b3261e;background:#f9e7e5}
 footer{margin-top:40px;font-size:13px;color:#777}
 @media (max-width:600px){body{padding:16px}table.mt,table.mt tbody,table.mt tr,table.mt td{display:block;width:100%;box-sizing:border-box}table.mt tr.head{display:none}table.mt tr{border:1px solid #e3d9c0;margin-top:10px}table.mt td{border-bottom:1px solid #efe7d3;padding:6px 10px}table.mt td:last-child{border-bottom:0}table.mt td::before{content:attr(data-label);display:block;font-size:13px;color:#666}}</style></head><body>
 <h1>Motion Tracker</h1><p class="sub">Paste your board meeting notes. See every motion, and what's missing before the minutes go out.</p>
-<label for="n">Meeting notes</label><textarea id="n" placeholder="e.g. Dana Ruiz moved to approve the fence repair bid. Seconded by Lee Park. Vote 5-1-1, carried."></textarea>
-<div><button id="go">Check motions</button><button class="alt" id="sample">Try sample notes</button><button class="alt" id="copy" disabled>Copy summary</button></div>
+<label for="n">Meeting notes</label><textarea id="n" placeholder="e.g. Dana Ruiz moved to approve the fence repair bid. Seconded by Lee Park. Vote 4-1-1, carried."></textarea>
+<div><button id="go">Check motions</button><button class="alt" id="sample">Try sample notes</button><button class="alt" id="formal">Try formal minutes</button><button class="alt" id="copy" disabled>Copy summary</button></div>
 <div id="out" aria-live="polite"></div>
+<details id="how"><summary>What counts as a motion?</summary><p>A motion needs three things on the record: who moved it, who seconded it, and the vote. Motion Tracker reads the ways minutes usually say that:</p><ul>
+<li><code>Moved by Dana Ruiz</code>, <code>Dana Ruiz moved to…</code>, <code>A motion was made by…</code>, <code>It was moved by…</code>, <code>Upon a motion by…</code>, <code>M/S Ruiz/Park</code></li>
+<li><code>Seconded by Lee Park</code>, <code>Lee Park seconded</code>, <code>Second: Lee Park</code></li>
+<li><code>Vote 4-1-1</code>, <code>7 ayes, 0 nays</code>, <code>AYES: Ruiz, Park NOES: Shah</code>, roll calls, <code>carried unanimously</code>, <code>All in favor</code></li></ul>
+<p>Times like <code>7-9 PM</code> and numbers like <code>Resolution 25-26</code> are not votes. “The board moved on to the next item” is not a motion. A vote that adds up to more people than were present gets flagged. If it can't tell, it says so instead of saying Ready.</p>
+<p><b>Why not just ask a chatbot?</b> A chatbot can sound sure and still invent a seconder. This runs on plain rules: the same notes always give the same answer, it points to the exact motion and line that's missing, and nothing you paste is stored or sent anywhere else.</p></details>
 <footer>Nothing you paste is stored. Sample names are made up. MIT licensed · LumeGrid</footer>
 <script>
 const SAMPLE=`Cedar Court HOA board meeting, Oct 8 (sample)
@@ -23,18 +30,32 @@ Lee Park moved to accept the fence repair bid from Northside Fencing for $6,400.
 Discussion about second quote. Vote 5-1-0, carried.
 Motion by Priya Shah to raise the late fee to $25. Seconded by Omar Cole.
 Motion to adjourn. Seconded by Dana Ruiz. All in favor.`;
+const FORMAL=`Maple Ridge School Board, Regular Meeting, Oct 14 (sample)
+Present: 5 of 5 board members. The meeting was called to order at 7:00 p.m.
+
+A motion was made by Director Alvarez and seconded by Director Chen to approve the consent agenda as presented. Motion carried unanimously.
+
+Upon a motion by Trustee Okafor, seconded by Trustee Brennan, the Board voted to adopt the 2027-28 school calendar.
+AYES: Okafor, Brennan, Alvarez, Chen. NOES: Whitfield. Motion carried 4-1.
+
+Director Whitfield moved that the Board authorize a bid for roof repairs at Lincoln Elementary, not to exceed $85,000. Motion carried.
+
+It was moved by Director Chen, seconded by Director Alvarez, to table the cell phone policy until November. Roll call vote: Alvarez - aye, Brennan - aye, Chen - aye, Okafor - nay, Whitfield - aye. Motion carried.
+
+The Board recessed from 8:15-8:30 p.m.`;
 let last;const $=id=>document.getElementById(id),esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 function invalidate(){last=null;$("out").innerHTML="";$("copy").disabled=true;$("copy").textContent="Copy summary"}
 $("n").addEventListener("input",invalidate);
-$("sample").onclick=()=>{$("n").value=SAMPLE;run()};$("go").onclick=run;
+$("sample").onclick=()=>{$("n").value=SAMPLE;run()};$("formal").onclick=()=>{$("n").value=FORMAL;run()};$("go").onclick=run;
 $("copy").onclick=async()=>{if(!last||!last.ready)return;await navigator.clipboard.writeText(last.summary);$("copy").textContent="Copied";setTimeout(()=>$("copy").textContent="Copy summary",1500)};
 async function run(){const r=await fetch("/api/check",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({notes:$("n").value})});
 const d=await r.json();if(d.error){last=null;$("copy").disabled=true;$("out").innerHTML=`<div class="banner no">${esc(d.error)}</div>`;return}last=d;
 if(!d.motions.length){$("out").innerHTML=`<div class="banner no">No motions found. Start a motion with a phrase like “Motion to…”, “Moved by…” or “Dana Ruiz moved to…”.</div>`;$("copy").disabled=true;return}
-const n=d.motions.reduce((a,m)=>a+m.gaps.length,0);
-const cell=(m,f,v)=>m.gaps.some(g=>g.field===f)?`<span class="gap">missing</span>`:esc(v);
-const vt=v=>!v?null:v.unanimous?"unanimous":`${v.for}-${v.against}-${v.abstain}`;
-$("out").innerHTML=`<div class="banner ${d.ready?"ok":"no"}">${d.ready?"✓ Ready for minutes: every motion has a mover, seconder and vote.":`${n} thing${n>1?"s":""} missing across ${d.motions.length} motions. Fix the notes and check again.`}</div>
+const n=d.motions.reduce((a,m)=>a+m.gaps.length,0)+(d.warnings||[]).length;
+const cell=(m,f,v)=>{const g=m.gaps.find(g=>g.field===f);return !g?esc(v):g.check?`${esc(v)} <span class="warn">⚠ check</span>`:`<span class="gap">missing</span>`};
+const vt=v=>!v?null:v.for==null?(v.unanimous?"unanimous":"carried, no count"):`${v.for}-${v.against}-${v.abstain}`;
+const warn=(d.warnings||[]).map(w=>`<div class="tip">⚠ “${esc(w.line)}” ${esc(w.tip)}</div>`).join("");
+$("out").innerHTML=`<div class="banner ${d.ready?"ok":"no"}">${d.ready?"✓ Ready for minutes: every motion has a mover, seconder and vote.":`${n} thing${n>1?"s":""} to fix across ${d.motions.length} motion${d.motions.length>1?"s":""}. Fix the notes and check again.`}${warn}</div>
 <table class="mt"><tr class="head"><th>#</th><th>Motion</th><th>Moved</th><th>Seconded</th><th>Vote</th><th>Result</th></tr>${d.motions.map((m,i)=>`<tr><td data-label="#">${i+1}</td><td data-label="Motion">${esc(m.text)}${m.gaps.map(g=>`<div class="tip">${esc(g.tip)}</div>`).join("")}</td><td data-label="Moved">${cell(m,"mover",m.mover)}</td><td data-label="Seconded">${cell(m,"seconder",m.seconder)}</td><td data-label="Vote">${cell(m,"vote",vt(m.vote))}</td><td data-label="Result">${esc(m.result??"")}</td></tr>`).join("")}</table>`;
 $("copy").disabled=!d.ready}
 </script></body></html>

@@ -1,0 +1,1207 @@
+[
+ {
+  "id": "forestport-run-on",
+  "org": "Town of Forestport, NY",
+  "type": "town",
+  "source": "real",
+  "url": "https://townofforestport.gov/town_board/regular-town-board-meeting-minutes-may-21-2025/",
+  "note": "three motions in one paragraph; voucher ranges are not votes",
+  "text": "ABSTRACTS: GENERAL: A motion was made by Councilman Addison and seconded by Councilwoman Verschneider to pay Abstract # 5 Vouchers #233- #298 in the amount of $62,307.81. 5 ayes/ 0 nays/0 absent MOTION CARRIED HIGHWAY: A motion was made by Councilwoman Abrial and seconded by Councilman Scouten to pay Abstract #5 Vouchers #100- # 149 in the amount of $44,876.68. 5 ayes/ 0 nays/0 absent MOTION CARRIED WATER DISTRICT #1: A motion was made by Councilwoman Verschneider and seconded by Councilwoman Abrial to pay Abstract #5, Vouchers #44- #60 in the amount of $8,640.31. 5 ayes/ 0 nays/0 absent MOTION CARRIED",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Addison",
+     "seconder": "Verschneider",
+     "vote": "5-0-0",
+     "result": "Carried"
+    },
+    {
+     "mover": "Abrial",
+     "seconder": "Scouten",
+     "vote": "5-0-0",
+     "result": "Carried"
+    },
+    {
+     "mover": "Verschneider",
+     "seconder": "Abrial",
+     "vote": "5-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "forestport-reports",
+  "org": "Town of Forestport, NY",
+  "type": "town",
+  "source": "real",
+  "url": "https://townofforestport.gov/town_board/regular-town-board-meeting-minutes-may-21-2025/",
+  "note": "",
+  "text": "REPORTS TOWN CLERK REPORTS JUSTICE REPORT PLANNING REPORT DOG REPORT SUPERVISOR REPORT A motion was made by Councilwoman Verschneider and seconded by Councilman Addison to accept the monthly reports. 5 ayes/ 0 nays/0 absent MOTION CARRIED",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Verschneider",
+     "seconder": "Addison",
+     "vote": "5-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "knox-resolutions",
+  "org": "Town of Knox, NY",
+  "type": "town",
+  "source": "real",
+  "url": "https://www.knoxny.gov/uploads/3/9/1/5/39151279/2025knoxaugust19minutes.pdf",
+  "note": "resolution numbers like 108-2025 are not votes",
+  "text": "RESOLUTION 108-2025 - A motion was made by Councilman Cyr seconded by Councilwoman Springer to\naccept and put into use, the Hardship/Waiver program and associated forms presented by Guilderland\nEMS. This motion carried unanimously 4:0.\nRESOLVED: to accept and put into use, the Hardship/Waiver program and associated forms\npresented by Guilderland EMS.\nCurrent Business:\nRESOLUTION 109-2025 - A motion was made by Supervisor Pokorny seconded by Councilman\nSaddlemire to approve the minutes for the July 15, 2025 meeting, as presented. This motion carried\nunanimously4:0.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Cyr",
+     "seconder": "Springer",
+     "vote": "4-0-0",
+     "result": "Carried"
+    },
+    {
+     "mover": "Pokorny",
+     "seconder": "Saddlemire",
+     "vote": "4-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "knox-discussion",
+  "org": "Town of Knox, NY",
+  "type": "town",
+  "source": "real",
+  "url": "https://www.knoxny.gov/uploads/3/9/1/5/39151279/2025knoxaugust19minutes.pdf",
+  "note": "discussion of 'the motion made' is not a new motion",
+  "text": "As the Board discussed the motion\nmade, 2 members voted, and 2 were going to abstain. After further discussion, all Board members\nsupported Mr. Sherman's frustration and voted, with regret, to complete the project, and accept the\nestimate from Keith Weiler.\nRESOLUTION 115-2025 - A motion was made by Supervisor Pokorny, seconded by Councilman\nSaddlemire, to accept the estimate from Keith Weiler to complete the plumbing and electrical at the\nparks building/concession stand. This motion carried unanimously 4:0, with regret from all 4 members.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Pokorny",
+     "seconder": "Saddlemire",
+     "vote": "4-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "hayward-motioned",
+  "org": "Town of Hayward, WI",
+  "type": "town",
+  "source": "real",
+  "url": "https://townofhaywardwi.gov/wp-content/uploads/2025/08/07082025-Minutes.pdf",
+  "note": "voice votes: result recorded, no count",
+  "text": "Meeting called to order by Chairman Froemel at 6:00pm.\nPledge of Allegiance\nDettloff motioned to approve July Regular Board Meeting Agenda. Williamson seconded. Motion carried.\nDettloff motioned to approve June Regular Board Meeting Minutes. Butterfield seconded. Motion carried.\nWilliamson motioned to approve June Special Board Meeting Minutes. Hessel seconded. Motion carried.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Dettloff",
+     "seconder": "Williamson",
+     "vote": "carried",
+     "result": "Carried"
+    },
+    {
+     "mover": "Dettloff",
+     "seconder": "Butterfield",
+     "vote": "carried",
+     "result": "Carried"
+    },
+    {
+     "mover": "Williamson",
+     "seconder": "Hessel",
+     "vote": "carried",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "hayward-zoning",
+  "org": "Town of Hayward, WI",
+  "type": "town",
+  "source": "real",
+  "url": "https://townofhaywardwi.gov/wp-content/uploads/2025/08/07082025-Minutes.pdf",
+  "note": "'Suzan/Helm' and 'Pages 17-18' must not be read as mover/seconder or vote",
+  "text": "Zoning:\nCSM: Suzan/Helm\nLocated in part of the NW 1/4 of the NE 1/4, of Section 32, Township 41N, Range 8W, in the Town of Hayward. Being a\ndivision of Lot 1 of Certified Survey Map No. 8805, recorded in Volume 39 Pages 17-18 as Document No. 449832.\nPlanning Commission recommended approval. Dettloff motioned to approve CSM. Williamson seconded. Motion\ncarried. CSM was signed by Chair Froemel.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Dettloff",
+     "seconder": "Williamson",
+     "vote": "carried",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "walton-all-in-favor",
+  "org": "Town of Walton, NY",
+  "type": "town",
+  "source": "real",
+  "url": "https://townofwalton.org/wp-content/uploads/2025/10/JUNE-9-2025-MINUTES.pdf",
+  "note": "",
+  "text": "RESOLUTION #73 ACCEPTANCE OF MINUTES\nA motion was made by Councilman Rodriguez-Betancourt,\nseconded by Armstrong approving the minutes of May 12, 2025\nas presented. All in favor, motion carried.\nRESOLUTION # 74 RENTING ROAD SIDE MOWER\nA motion was made by Councilman Rodriguez-Betancourt,\nseconded by Armstrong to approve renting a road side mower\nfrom Yakano for $6,000/month up to 2 months. All in favor,\nmotion carried.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Rodriguez-Betancourt",
+     "seconder": "Armstrong",
+     "vote": "unanimous",
+     "result": "Carried"
+    },
+    {
+     "mover": "Rodriguez-Betancourt",
+     "seconder": "Armstrong",
+     "vote": "unanimous",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "walton-no-vote",
+  "org": "Town of Walton, NY",
+  "type": "town",
+  "source": "real",
+  "url": "https://townofwalton.org/wp-content/uploads/2025/10/JUNE-9-2025-MINUTES.pdf",
+  "note": "no vote recorded; the time is not a vote",
+  "text": "Upon a motion from Councilman Rodriguez-Betancourt,\nseconded by Armstrong to close executive session at 7:26 p.m.",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Rodriguez-Betancourt",
+     "seconder": "Armstrong",
+     "vote": null,
+     "result": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "hyrum-voted-aye",
+  "org": "Hyrum City Council, UT",
+  "type": "city",
+  "source": "real",
+  "url": "https://mccmeetings.blob.core.usgovcloudapi.net/hyrumut-pubu/MEET-Minutes-fc741b31451e45369f5700f9afe5c7c7.pdf",
+  "note": "named roll call in prose",
+  "text": "ACTION Councilmember James made a motion to approve the minutes\nof a regular meeting held on August 19, 2025 as written.\nCouncilmember Rasmussen seconded the motion and\nCouncilmembers Clawson, James, Nelson, and Rasmussen\nvoted aye. The motion passed.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "James",
+     "seconder": "Rasmussen",
+     "vote": "4-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "hyrum-moved-to-next",
+  "org": "Hyrum City Council, UT",
+  "type": "city",
+  "source": "real",
+  "url": "https://mccmeetings.blob.core.usgovcloudapi.net/hyrumut-pubu/MEET-Minutes-fc741b31451e45369f5700f9afe5c7c7.pdf",
+  "note": "'moved to the next agenda item' is not a motion",
+  "text": "There being no further public comment, Mayor Miller moved to the\nnext agenda item.",
+  "expect": {
+   "ready": false,
+   "motions": []
+  }
+ },
+ {
+  "id": "hyrum-table",
+  "org": "Hyrum City Council, UT",
+  "type": "city",
+  "source": "real",
+  "url": "https://mccmeetings.blob.core.usgovcloudapi.net/hyrumut-pubu/MEET-Minutes-fc741b31451e45369f5700f9afe5c7c7.pdf",
+  "note": "motion to table; 'Resolution 25-26' is not a vote",
+  "text": "ACTION Councilmember Rasmussen made a motion to table\nResolution 25-26 a resolution setting commercial sewer\nservice rates with a lift a station until the City can\nexplore its options of having Cache County own its lift\nstation rather than Hyrum City. Councilmember Clawson\nseconded the motion and Councilmember Clawson voted aye,\nCouncilmember James voted aye, Councilmember Nelson\nvoted aye, and Councilmember Rasmussen voted aye. The\nmotion passed.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Rasmussen",
+     "seconder": "Clawson",
+     "vote": "4-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "rpv-roll-call",
+  "org": "Rancho Palos Verdes City Council, CA",
+  "type": "city",
+  "source": "real",
+  "url": "https://rpv.granicus.com/MetaViewer.php?clip_id=4807&meta_id=128781&view_id=5",
+  "note": "",
+  "text": "APPROVAL OF THE AGENDA:\nCouncilmember Ferraro moved, seconded by Mayor Pro Tem Seo, to approve the agenda as presented.\nThe motion passed on the following roll call vote:\nAYES: Ferraro, Lewis, Perestam, Seo and Mayor Bradley\nNOES: None",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Ferraro",
+     "seconder": "Seo",
+     "vote": "5-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "davis-failed-then-passed",
+  "org": "Davis City Council, CA",
+  "type": "city",
+  "source": "real",
+  "url": "https://documents.cityofdavis.org/Media/CityCouncil/Documents/PDF/CityCouncil/CouncilMeetings/Minutes/2025/Minutes-2025-12-16-City-Council-Meeting.pdf",
+  "note": "failed motion, friendly amendment is not a separate motion",
+  "text": "B. Vaitla moved, seconded by G. Partida, to direct staff and council sub-\ncommittee to work with developer to include some number of low-income\naffordable units in baseline features with identified triggers.\n\nB. Vaitla amend motion: Identify trigger that at some point will transfer\nresponsibility from city to developer if units are not built. Staff and council\nsubcommittee discretion to develop.\n\nMotion failed by the following vote:\nAYES: Vaitla\nNOES: Chapman, Deos, Neville, Partida\n\nD. Neville moved, seconded by L. Deos, to approve Exhibit E - Affordable Housing Project Individualized Plan as the applicant's current proposal as presented.\n\nG. Partida proposed a friendly amendment to the motion: Direct staff and\ncouncil subcommittee to work with developer to add a trigger to Development Agreement to shift burden away from city based on some condition occurring. Accepted by mover and second.\n\nMotion passed by the following vote:\nAYES: Chapman, Deos, Neville, Partida\nNOES: Vaitla",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Vaitla",
+     "seconder": "Partida",
+     "vote": "1-4-0",
+     "result": "Failed"
+    },
+    {
+     "mover": "Neville",
+     "seconder": "Deos",
+     "vote": "4-1-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "davis-substitute",
+  "org": "Davis City Council, CA",
+  "type": "city",
+  "source": "real",
+  "url": "https://documents.cityofdavis.org/Media/CityCouncil/Documents/PDF/CityCouncil/CouncilMeetings/Minutes/2025/Minutes-2025-12-16-City-Council-Meeting.pdf",
+  "note": "substitute motion; main motion vote comes after it",
+  "text": "B. Vaitla moved, seconded by J. Chapman, as follows:\n1. Designate D. Neville to serve as Mayor for calendar year 2026.\n2. Designate G. Partida to serve as Vice Mayor for calendar year 2026.\nD. Neville moved a substitute motion, seconded by L. Deos, as follows:\n1. Designate D. Neville to serve as Mayor for calendar year 2026.\n2. Designate L. Deos to serve as Vice Mayor for calendar year 2026.\nSubstitute motion failed by the following vote:\nAYES: Deos, Neville\nNOES: Chapman, Partida, Vaitla\nMain motion passed unanimously.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Vaitla",
+     "seconder": "Chapman",
+     "vote": "unanimous",
+     "result": "Carried"
+    },
+    {
+     "mover": "Neville",
+     "seconder": "Deos",
+     "vote": "2-3-0",
+     "result": "Failed"
+    }
+   ]
+  }
+ },
+ {
+  "id": "chester-consent",
+  "org": "Chester School Board, NH",
+  "type": "school",
+  "source": "real",
+  "url": "https://chesternh.org/AgendaCenter/ViewFile/Minutes/_02042026-72",
+  "note": "",
+  "text": "Ms. Bickford moved to approve the Consent Agenda, including accepting and expending\nunanticipated grant funds in the amount of $900, as presented. Mr. Liguori seconded the motion.\nThe motion carried 5-0-0.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Bickford",
+     "seconder": "Liguori",
+     "vote": "5-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "chester-roll-call-time",
+  "org": "Chester School Board, NH",
+  "type": "school",
+  "source": "real",
+  "url": "https://chesternh.org/AgendaCenter/ViewFile/Minutes/_02042026-72",
+  "note": "time 9:50 is not a vote",
+  "text": "Ms. Bickford moved to leave the non-public session and return to public meeting at 9:50 p.m. Mr. Kozura seconded the motion. A roll call vote was taken: Bickford - aye, DeNenno - aye, Kozura - aye, Barthelmes - aye, Liguori - aye. The motion carried 5-0-0.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Bickford",
+     "seconder": "Kozura",
+     "vote": "5-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "chester-moved-that",
+  "org": "Chester School Board, NH",
+  "type": "school",
+  "source": "real",
+  "url": "https://chesternh.org/AgendaCenter/ViewFile/Minutes/_02042026-72",
+  "note": "'moved that' form",
+  "text": "Ms. Bickford moved to recommend Article 3 as written. Mr. Liguori seconded the motion. The\nmotion carried 5-0-0.\nMs. Bickford moved that the School Board place Article 3 on the warrant for the 2026 School\nDistrict Meeting. Ms. Barthelmes seconded the motion. The motion carried 5-0-0.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Bickford",
+     "seconder": "Liguori",
+     "vote": "5-0-0",
+     "result": "Carried"
+    },
+    {
+     "mover": "Bickford",
+     "seconder": "Barthelmes",
+     "vote": "5-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "chester-seconds-word",
+  "org": "Chester School Board, NH",
+  "type": "school",
+  "source": "real",
+  "url": "https://chesternh.org/AgendaCenter/ViewFile/Minutes/_02042026-72",
+  "note": "'40 seconds' is not a seconder",
+  "text": "Ms. Barthelmes moved to table the remaining 29 minutes and 40 seconds for members of the\npublic to comment on School District matters. Mr. Liguori seconded the motion. The motion\ncarried 5-0-0.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Barthelmes",
+     "seconder": "Liguori",
+     "vote": "5-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "hawthorn-motion-label",
+  "org": "Hawthorn CCSD 73 Board of Education, IL",
+  "type": "school",
+  "source": "real",
+  "url": "https://www.hawthorn73.org/fs/resource-manager/view/ee81982b-3e0c-4fe6-b114-137166f0f7e1",
+  "note": "",
+  "text": "MOTION: Wes Polen moved that the Board of Education approve the appointment of Julie Clifford to be Hawthorn's Delegate to\nthe 2024 IASB Delegate Assembly; Karl Borchers seconded the motion.\nRoll Call Vote: Robin Cleek, Karl Borchers, Wes Polen, Julie Clifford, Joel Finfer, George Fievet and Michael Engle.\nMotion carried: 7 ayes; 0 nayes",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Polen",
+     "seconder": "Borchers",
+     "vote": "7-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "hawthorn-abstain",
+  "org": "Hawthorn CCSD 73 Board of Education, IL",
+  "type": "school",
+  "source": "real",
+  "url": "https://www.hawthorn73.org/fs/resource-manager/view/ee81982b-3e0c-4fe6-b114-137166f0f7e1",
+  "note": "",
+  "text": "RECOMMENDED MOTION: Wes Polen moved that the Board of Education approve 7.1 Board Meeting Minutes from\nOctober 17, 2024 as presented; seconded by Karl Borchers.\nRoll Call Vote: Robin Cleek, Joel Finfer, Wes Polen, George Fievet, Julie Clifford, Michael Engle, and Karl Borchers.\nMotion carried: 6 ayes; 1 abstain",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Polen",
+     "seconder": "Borchers",
+     "vote": "6-0-1",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "boardbook-aye-nay",
+  "org": "School board (BoardBook, org 1401), IL",
+  "type": "school",
+  "source": "real",
+  "url": "https://meetings.boardbook.org/Documents/DownloadPDF/7357736?org=1401",
+  "note": "",
+  "text": "A motion was made by Member Chalmers seconded by Member Myles to\napprove the Committee of the Executive Session April 20, 2026\nOn a Roll Call vote, members voted as follows:\nAYE: Chalmers, Myles, Richardson, Barnett\nAbsent: Armstrong, Webb, Pollard\nNAY: None",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Chalmers",
+     "seconder": "Myles",
+     "vote": "4-0-0",
+     "result": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "boardbook-all-members",
+  "org": "School board (BoardBook, org 1401), IL",
+  "type": "school",
+  "source": "real",
+  "url": "https://meetings.boardbook.org/Documents/DownloadPDF/7357736?org=1401",
+  "note": "'seconded by All Members' names no seconder; must not show Ready",
+  "text": "It is moved by Member Chalmers seconded by All Members to Return to\nOpen Session at 8:17 p.m.\nAll Members present voted AYE: All\nNAY: None Motioned carried",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Chalmers",
+     "seconder": null,
+     "vote": "unanimous",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "westdepere-it-was-moved",
+  "org": "School District of West De Pere, WI",
+  "type": "school",
+  "source": "real",
+  "url": "https://www.wdpsd.com/cms_files/resources/July%2016%202025%20Regular%20Meeting%20Minutes%20approved.pdf",
+  "note": "multi-word surnames",
+  "text": "It was moved by Ryan Van Den Heuvel and seconded by Barbara Van Deurzen to accept the agenda.\nVoting Yes: 5 Voting No: 0 Motion carried.\nThere were no recognition of students and staff.\nIt was moved by Barbara Van Deurzen and seconded by Scott Borley that previously paid bills to Vos\nElectric, VDH Electric, and Best Built be approved. Voting Yes: 4 Voting No: 0\nRyan Van Den Heuvel abstained. Motion carried.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Van Den Heuvel",
+     "seconder": "Van Deurzen",
+     "vote": "5-0-0",
+     "result": "Carried"
+    },
+    {
+     "mover": "Van Deurzen",
+     "seconder": "Borley",
+     "vote": "4-0-1",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "westdepere-adjourn-time",
+  "org": "School District of West De Pere, WI",
+  "type": "school",
+  "source": "real",
+  "url": "https://www.wdpsd.com/cms_files/resources/July%2016%202025%20Regular%20Meeting%20Minutes%20approved.pdf",
+  "note": "",
+  "text": "It was moved by Scott Borley and seconded by Ryan Van Den Heuvel at 5:52 PM that the meeting be\nadjourned. Voting Yes: 5 Voting No: 0 Motion carried",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Borley",
+     "seconder": "Van Den Heuvel",
+     "vote": "5-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "gray-charter",
+  "org": "Gray Collegiate Academy charter board, SC",
+  "type": "school",
+  "source": "real",
+  "url": "https://www.graycollegiateacademy.org/_files/ugd/f09dd4_f55acdd27078465aa933694c3c84e6a8.pdf",
+  "note": "",
+  "text": "3. Adoption of Agenda\nMatt Cunningham made a motion to approve the agenda as presented. Michael\nBoulware seconded the motion. Motion passed unanimously.\n4. Approval of the minutes from the January 27, 2025, board meeting\nMatt Cunningham motioned to approve the minutes as written. Chris Greer\nseconded the motion. Motion passed unanimously to approve the board minutes\nas written.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Cunningham",
+     "seconder": "Boulware",
+     "vote": "unanimous",
+     "result": "Carried"
+    },
+    {
+     "mover": "Cunningham",
+     "seconder": "Greer",
+     "vote": "unanimous",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "gray-adjourn-no-vote",
+  "org": "Gray Collegiate Academy charter board, SC",
+  "type": "school",
+  "source": "real",
+  "url": "https://www.graycollegiateacademy.org/_files/ugd/f09dd4_f55acdd27078465aa933694c3c84e6a8.pdf",
+  "note": "no vote recorded",
+  "text": "11. Adjournment\nMatt Cunningham made a motion to adjourn at 1:16 p.m. and was seconded by\nAndy Markl.",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Cunningham",
+     "seconder": "Markl",
+     "vote": null,
+     "result": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "hillcrest-ms-shorthand",
+  "org": "Hillcrest IX HOA, AZ",
+  "type": "hoa",
+  "source": "real",
+  "url": "https://hillcrest9.org/media/files/minutes/Board_Meeting_Minutes_20260406.pdf",
+  "note": "m/s Name/Name shorthand",
+  "text": "Secretary: Review & Approval of Minutes. Review of March 2, 2026 Board Meeting minutes. m/s: Ryan/Anne - approved\nTrail cameras: Eric provided a comparison of two trail camera models. The Rexing model H2 was selected. Up to $300 was approved for the purchase of two cameras along with any required accessories (m/s: Anne/Darla - approved).",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Ryan",
+     "seconder": "Anne",
+     "vote": "carried",
+     "result": "Carried"
+    },
+    {
+     "mover": "Anne",
+     "seconder": "Darla",
+     "vote": "carried",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "sanignacio-msp-and-times",
+  "org": "San Ignacio Heights HOA, AZ",
+  "type": "hoa",
+  "source": "real",
+  "url": "https://www.sanignacioheights.com/_files/ugd/0d4b50_648e7fd8dd5947c196fdd9a594d38590.pdf",
+  "note": "M/S/P without names; 8:30-9:00, 9-10 and 3-4 are not votes",
+  "text": "Review and adoption of the agenda: M/S/P\n\nPresident's Report: Don reported that he had made preparations ahead of the Annual\nMeeting. Don suggested the board members be there no earlier than 8:15 AM as sign in\nfor residents is from 8:30-9:00 AM.\n\nTreasurers Report: James Trobec: Presented the January financials. 9-10 residents still\nhave not paid their 2026 dues with 3-4 have not paid their Road Assessment.\n\nA motion was made to authorize repair of the sidewalk for up to $1000. M/S/P",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": null,
+     "seconder": null,
+     "vote": "carried",
+     "result": "Carried"
+    },
+    {
+     "mover": null,
+     "seconder": null,
+     "vote": "carried",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "applecanyon-poa",
+  "org": "Apple Canyon Lake Property Owners Association, IL",
+  "type": "hoa",
+  "source": "real",
+  "url": "https://www.applecanyonlake.org/documents/20124/416286/09+20+25+Board+Meeting+Minutes.pdf/ca97ed20-5d09-a1c3-452c-e438598e9c2d?download=true&t=1760983028535",
+  "note": "",
+  "text": "3.0 Return to Open Session\nCarmel Cottrell moved to return to open session at 9:03 am. Seconded by Mark Kosco.\nMotion carried unanimously.\n12.2. Greenway Stewardship Application: 1A61 Blackhawk Ln\nMark Kosco moved to approve the Greenway Stewardship Application for 1A61 Blackhawk\nLn per the terms and recommendations agreed to in the application. Seconded by\nBrett Livengood.\nMotion carried with Brian Holt abstaining.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Cottrell",
+     "seconder": "Kosco",
+     "vote": "unanimous",
+     "result": "Carried"
+    },
+    {
+     "mover": "Kosco",
+     "seconder": "Livengood",
+     "vote": "carried",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "meiners-msc",
+  "org": "Meiners Oaks Water District, CA",
+  "type": "district",
+  "source": "real",
+  "url": "https://meinersoakswater.com/wp-content/uploads/2025/09/08-19-2025-Regular-Meeting-Minutes-.pdf",
+  "note": "one motion despite 'M/S/C' tail",
+  "text": "3. Approval of the Minutes\nApproval of the July 15, 2025, Regular Board Meeting minutes.\nDirector Kentosh made the motion to approve the minutes from the July 15, 2025, meeting.\nDirector Pangea seconded the motion.\nNo Public Comment.\nKentosh/Pangea\n(5) Ayes - M/S/C",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Kentosh",
+     "seconder": "Pangea",
+     "vote": "5-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "mswd-voting-yea",
+  "org": "Mission Springs Water District, CA",
+  "type": "district",
+  "source": "real",
+  "url": "https://mccmeetingspublic.blob.core.usgovcloudapi.net/mswdca-meet-0ddcc00091964d5491ae8f4db7d5c22c/ITEM-Attachment-001-95fb7c105cab490aa0b0e36fa0a4cbe3.pdf",
+  "note": "",
+  "text": "CONSENT AGENDA\nMotion made by Vice President Griffith, Seconded by Director Duff.\nVoting Yea: President Sewell, Vice President Griffith, Director Martin, Director Duff, Director\nMayrhofen",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Griffith",
+     "seconder": "Duff",
+     "vote": "5-0-0",
+     "result": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "stwa-named-split",
+  "org": "South Texas Water Authority",
+  "type": "district",
+  "source": "real",
+  "url": "https://stwa.org/documents/1553/STWA_Minutes_090325_OCR.pdf",
+  "note": "",
+  "text": "Mr. J. Morales made a motion to authorize STWA Management to negotiate a Water Supply\nAgreement describing the terms and conditions for South Texas Water Authority to sell a quantity\nof potable water to the City of Corpus Christi. Mr. Graveley seconded the motion. The motion\npassed with Mr. Rodriguez, Mr. J. Morales, Mr. Graveley, Ms. Garcia, Ms. Garza and Mr. D.\nMorales voting in favor and Dr. Lawhon voting against the motion.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Morales",
+     "seconder": "Graveley",
+     "vote": "6-1-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "stwa-table-adjourn",
+  "org": "South Texas Water Authority",
+  "type": "district",
+  "source": "real",
+  "url": "https://stwa.org/documents/1553/STWA_Minutes_090325_OCR.pdf",
+  "note": "",
+  "text": "Mr. Rodriguez\nmade a motion to table the amendment to the Water Supply Agreement with Seven Seas Water\npending receipt of an agreement between the City of Corpus Christi and South Texas Water\nAuthority. Mr. J. Morales seconded the motion and all voted in favor.\nWith no further business to discuss, Mr. Rodriguez moved to adjourn the meeting at 12:53 p.m.\nMr. J. Morales seconded. The motion carried.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Rodriguez",
+     "seconder": "Morales",
+     "vote": "unanimous",
+     "result": "Carried"
+    },
+    {
+     "mover": "Rodriguez",
+     "seconder": "Morales",
+     "vote": "carried",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "nmreta-withdrawn-tabled",
+  "org": "New Mexico Renewable Energy Transmission Authority",
+  "type": "public authority",
+  "source": "real",
+  "url": "https://nmreta.com/wp-content/uploads/2025/12/Board-Minutes_09.24.2025_approved.pdf",
+  "note": "withdrawn motion needs no vote; 'asked for a motion' is not a motion",
+  "text": "Chair Busch asked for a motion to approve the minutes from the Special Meeting on\nJune 24, 2025. Member Barela made a motion to approve the minutes, and Member\nMiller seconded the motion, but there were not enough members eligible to vote on\nthe June 24, 2025 meeting minutes. The motion and second were withdrawn.\nMember Suina made a motion to table the approval of the June 24, 2025 minutes until\nthe next meeting. Member Lewis seconded the motion. Chair Busch called for a vote\nto table the minutes and the motion passed unanimously by voice vote.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Barela",
+     "seconder": "Miller",
+     "vote": null,
+     "result": "Withdrawn"
+    },
+    {
+     "mover": "Suina",
+     "seconder": "Lewis",
+     "vote": "unanimous",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "nmreta-moved-for-approval",
+  "org": "New Mexico Renewable Energy Transmission Authority",
+  "type": "public authority",
+  "source": "real",
+  "url": "https://nmreta.com/wp-content/uploads/2025/12/Board-Minutes_09.24.2025_approved.pdf",
+  "note": "",
+  "text": "Chair Busch asked for a motion to approve the financial statements for the period\nending August 31, 2025. Member Suina moved for approval. Member Barela\nseconded the motion. Chair Busch called for any further questions or comments.\nNone were put forth. The motion was approved by a unanimous voice vote.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Suina",
+     "seconder": "Barela",
+     "vote": "unanimous",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "energytrust-labeled",
+  "org": "Energy Trust of Oregon (nonprofit)",
+  "type": "nonprofit",
+  "source": "real",
+  "url": "https://www.energytrust.org/wp-content/uploads/2024/11/April_23_2025_Board_Meeting_Minutes.pdf",
+  "note": "labeled fields after the motion text",
+  "text": "MOTION: Approve consent agenda (R1063)\n\nConsent agenda includes:\n- March 26, 2025, Board Meeting Minutes\n\nMoved by: Jane Peters Seconded by: Bill Tovey\nVote: In favor: 7 Abstained: 0\nOpposed: 0",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Peters",
+     "seconder": "Tovey",
+     "vote": "7-0-0",
+     "result": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "energytrust-roll",
+  "org": "Energy Trust of Oregon (nonprofit)",
+  "type": "nonprofit",
+  "source": "real",
+  "url": "https://www.energytrust.org/wp-content/uploads/2024/11/April_23_2025_Board_Meeting_Minutes.pdf",
+  "note": "",
+  "text": "Moved by: Bill Tovey Seconded by: Susan Brodahl\nVote: In favor: 7 Abstained: 0\nOpposed: 1\nRoll Call:\nSilvia Tanner: Yes\nPeter Therkelsen: Yes\nThelma Fleming: Yes\nAnne Root: Yes\nSusan Brodahl: Yes\nJane Peters: Yes\nBill Tovey: Yes\nHenry Lorenzen: No",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Tovey",
+     "seconder": "Brodahl",
+     "vote": "7-1-0",
+     "result": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "usawe-caps",
+  "org": "USA Working Equitation (nonprofit)",
+  "type": "nonprofit",
+  "source": "real",
+  "url": "https://usawe.org/wp-content/uploads/2025/07/25.07.09_BOD-Mtg-Minutes-Approved.pdf",
+  "note": "all-caps names with titles; one motion",
+  "text": "KIKI PANTAZE, R4 DIRECTOR, made a motion; SARA BARNWELL, R5 DIRECTOR, seconded\nMotion #1: Accept the 070925 Treasurer's report, as submitted by Treasurer Leesa Nero.\nMotion passed by voice vote with 11 in favor, 0 opposed, 0 abstained, 0 recused, 2 absent.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Pantaze",
+     "seconder": "Barnwell",
+     "vote": "11-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "usenix-words",
+  "org": "USENIX Association (nonprofit)",
+  "type": "nonprofit",
+  "source": "real",
+  "url": "https://www.usenix.org/sites/default/files/2025-06-02_signed_board_meeting_minutes.pdf",
+  "note": "vote counts in words",
+  "text": "Andersen moved to accept the minutes of the May 2025 meeting as presented. Banerjee\nseconded the motion. Seven voted in favor; one abstained; none opposed. Motion carried.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Andersen",
+     "seconder": "Banerjee",
+     "vote": "7-0-1",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "kpfk-agenda-no-mover",
+  "org": "KPFK Local Station Board (Pacifica Foundation)",
+  "type": "nonprofit",
+  "source": "real",
+  "url": "https://www.kpftx.org/archives/pnb/kpfk/250713/kpfk250713_9291_minutes.pdf",
+  "note": "",
+  "text": "Motion: To approve the agenda as presented.\nVote: Yes (13), No (6), Abstain (1).\nResult: Agenda approved",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": null,
+     "seconder": null,
+     "vote": "13-6-1",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "kpfk-amendment",
+  "org": "KPFK Local Station Board (Pacifica Foundation)",
+  "type": "nonprofit",
+  "source": "real",
+  "url": "https://www.kpftx.org/archives/pnb/kpfk/250713/kpfk250713_9291_minutes.pdf",
+  "note": "amendment inside a main motion",
+  "text": "Motion: Establish a rule allowing two speakers in favor and two opposed on motions, intended to balance\ndebate and improve efficiency.\nMoved by the Chair, Seconded by Myla Reson\nAmendment: Ian Johnston moved to amend the main motion to increase to three speakers each side.\nSeconded by Jack Neff. Yes (7), No (13) Abstain (1) Amendment failed.\nMain Motion Vote: Yes (14), No (4), Abstain (2).\nResult: Main Motion Passed.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Chair",
+     "seconder": "Reson",
+     "vote": "14-4-2",
+     "result": "Carried"
+    },
+    {
+     "mover": "Johnston",
+     "seconder": "Neff",
+     "vote": "7-13-1",
+     "result": "Failed"
+    }
+   ]
+  }
+ },
+ {
+  "id": "hamptonfalls-upon-motion",
+  "org": "Hampton Falls Library Trustees, NH",
+  "type": "library",
+  "source": "real",
+  "url": "https://hamptonfallslibrary.org/wp-content/uploads/2025.7.24-library-trustee-meeting-minutes-final.pdf",
+  "note": "two motions in one paragraph, passive voice",
+  "text": "Unanticipated donations received were $208.30 which was accepted upon a motion by T. Shek, seconded by A.\nMagnarelli and all agreed. We also received a check from the Trustees of the Trust Funds for $887.55 for 2024 trust\nfund income. A motion to accept that amount was made by B. Mutrie, seconded by A. Magnarelli and all approved.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Shek",
+     "seconder": "Magnarelli",
+     "vote": "unanimous",
+     "result": "Carried"
+    },
+    {
+     "mover": "Mutrie",
+     "seconder": "Magnarelli",
+     "vote": "unanimous",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "hamptonfalls-adjourn",
+  "org": "Hampton Falls Library Trustees, NH",
+  "type": "library",
+  "source": "real",
+  "url": "https://hamptonfallslibrary.org/wp-content/uploads/2025.7.24-library-trustee-meeting-minutes-final.pdf",
+  "note": "",
+  "text": "The meeting adjourned at 5:30 upon a motion by L. Coe, seconded by T. Shek and all members voted Aye.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Coe",
+     "seconder": "Shek",
+     "vote": "unanimous",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "boyden-split-lines",
+  "org": "Boyden Library Trustees, MA",
+  "type": "library",
+  "source": "real",
+  "url": "https://boydenlibrary.org/board-of-library-trustees-2/",
+  "note": "blank lines between motion and second",
+  "text": "Lakeview Pavilion Foundation Donation:\n\nJ. Parlapiano made a motion to accept the $2815 donation from the Lakeview Pavilion Foundation for museum passes to Boyden Library.\n\nP. Ivanovskis seconded the motion.\nPassed 4-0-0.\n\nApproval of Meeting Minutes\n\nGiven a lack of quorum, K. Penders moved to table the approval of the April meeting minutes until the next Board meeting.\n\nA. Clements seconded the motion.\nPassed 4-0-0",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Parlapiano",
+     "seconder": "Ivanovskis",
+     "vote": "4-0-0",
+     "result": "Carried"
+    },
+    {
+     "mover": "Penders",
+     "seconder": "Clements",
+     "vote": "4-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "boyden-inline",
+  "org": "Boyden Library Trustees, MA",
+  "type": "library",
+  "source": "real",
+  "url": "https://boydenlibrary.org/board-of-library-trustees-2/",
+  "note": "'Motion: A motion was made' is one motion",
+  "text": "Some additional language has been proposed to add clarity to the meeting room policy. J. Parlapiano made a motion to approve the policy as amended. A. Clement seconded the motion and it passed 4-0-0.\nMotion: A motion was made by K. Penders and seconded by P. Ivanovskis to adjourn at 9:00 p.m.\nAll were in favor and the motion was approved 4-0-0.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Parlapiano",
+     "seconder": "Clement",
+     "vote": "4-0-0",
+     "result": "Carried"
+    },
+    {
+     "mover": "Penders",
+     "seconder": "Ivanovskis",
+     "vote": "4-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "funk-first-names",
+  "org": "Village of Funk, NE",
+  "type": "town",
+  "source": "real",
+  "url": "https://funkne.com/documents/1534/11-10-25_Minutes.pdf",
+  "note": "",
+  "text": "It was moved by Michelle and seconded by Michael to approve the minutes of the Regular Board Meeting on October 13, 2025. Ayes: Ed,\nMichelle, Michael, Patty, David. Nays: None. Motion carried.\nIt was moved by Michael and seconded by Patty to approve the claims payable to Michelle for October 2025. Ayes: Patty, Michael, Ed, David.\nMichelle abstained. Nays: none. Motion carried.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Michelle",
+     "seconder": "Michael",
+     "vote": "5-0-0",
+     "result": "Carried"
+    },
+    {
+     "mover": "Michael",
+     "seconder": "Patty",
+     "vote": "4-0-1",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "live-i-move",
+  "org": "(constructed) nonprofit live notes",
+  "type": "constructed",
+  "source": "constructed",
+  "url": null,
+  "note": "'I move' never names the mover; must flag",
+  "text": "Pat: I move that we approve the 2027 budget as presented.\nSecond from Lena Ortiz.\nVote 6-0-1, passed.",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": null,
+     "seconder": "Ortiz",
+     "vote": "6-0-1",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "live-ms-slash",
+  "org": "(constructed) HOA shorthand",
+  "type": "constructed",
+  "source": "constructed",
+  "url": null,
+  "note": "",
+  "text": "Approve pool contract with BlueWave, $14,200. M/S Ruiz/Park. 4-1, carried.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Ruiz",
+     "seconder": "Park",
+     "vote": "4-1-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "live-time-not-vote",
+  "org": "(constructed) PTA notes",
+  "type": "constructed",
+  "source": "constructed",
+  "url": null,
+  "note": "7-9 PM is a time, not a vote",
+  "text": "Motion to hold the fall cleanup from 7-9 PM on Nov 8. Moved by Dana Ruiz, seconded by Lee Park.",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Ruiz",
+     "seconder": "Park",
+     "vote": null,
+     "result": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "live-two-in-one",
+  "org": "(constructed) HOA notes",
+  "type": "constructed",
+  "source": "constructed",
+  "url": null,
+  "note": "two motions in one line; second has no vote",
+  "text": "Ruiz moved to approve the minutes, Park seconded, carried 5-0. Shah moved to adjourn, Cole seconded.",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Ruiz",
+     "seconder": "Park",
+     "vote": "5-0-0",
+     "result": "Carried"
+    },
+    {
+     "mover": "Shah",
+     "seconder": "Cole",
+     "vote": null,
+     "result": null
+    }
+   ]
+  }
+ },
+ {
+  "id": "live-unanimous-roll",
+  "org": "(constructed) school board notes",
+  "type": "constructed",
+  "source": "constructed",
+  "url": null,
+  "note": "",
+  "text": "A motion was made by Trustee Alvarez and seconded by Trustee Kim to adopt Policy 5131.\nRoll call: Alvarez aye, Kim aye, Nguyen aye, Brooks nay, Patel abstain. Motion carried 3-1-1.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Alvarez",
+     "seconder": "Kim",
+     "vote": "3-1-1",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "live-tabled-fail",
+  "org": "(constructed) town notes",
+  "type": "constructed",
+  "source": "constructed",
+  "url": null,
+  "note": "",
+  "text": "Moved by Jo Allen to table the parking item. Seconded by Sam Ortiz. Motion failed 2-3.",
+  "expect": {
+   "ready": true,
+   "motions": [
+    {
+     "mover": "Allen",
+     "seconder": "Ortiz",
+     "vote": "2-3-0",
+     "result": "Failed"
+    }
+   ]
+  }
+ },
+ {
+  "id": "live-vote-exceeds-present",
+  "org": "(constructed) HOA notes",
+  "type": "constructed",
+  "source": "constructed",
+  "url": null,
+  "note": "vote adds to 7 but only 6 present: flag",
+  "text": "Quorum present (6 of 7).\nMotion to approve the reserve study. Moved by Dana Ruiz, seconded by Lee Park. Vote 5-1-1.",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Ruiz",
+     "seconder": "Park",
+     "vote": "5-1-1",
+     "result": "Carried"
+    }
+   ]
+  }
+ },
+ {
+  "id": "live-same-person",
+  "org": "(constructed) club notes",
+  "type": "constructed",
+  "source": "constructed",
+  "url": null,
+  "note": "mover cannot second",
+  "text": "Omar Cole moved to buy new chairs. Seconded by Omar Cole. Vote 5-0.",
+  "expect": {
+   "ready": false,
+   "motions": [
+    {
+     "mover": "Cole",
+     "seconder": "Cole",
+     "vote": "5-0-0",
+     "result": "Carried"
+    }
+   ]
+  }
+ }
+]
