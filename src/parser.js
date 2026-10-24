@@ -42,8 +42,8 @@ export function parseMotions(text) {
 }
 export function findGaps(m) {
   const g = [];
-  if (!m.mover) g.push({ field: "mover", tip: "Add who made the motion, e.g. 'Moved by Dana Ruiz'." });
-  if (!m.seconder) g.push({ field: "seconder", tip: "Add who seconded, e.g. 'Seconded by Lee Park'." });
+  if (!m.mover) g.push({ field: "mover", tip: "Add who made the motion, e.g. 'Moved by Sam Ortiz'." });
+  if (!m.seconder) g.push({ field: "seconder", tip: "Add who seconded, e.g. 'Seconded by Jo Allen'." });
   if (!m.vote) g.push({ field: "vote", tip: "Add the vote, e.g. 'Vote 5-1-1' or 'unanimous'." });
   if (m.mover && m.seconder && m.mover === m.seconder) g.push({ field: "seconder", tip: "The mover can't also second the motion." });
   return g;

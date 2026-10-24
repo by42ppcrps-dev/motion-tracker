@@ -41,3 +41,15 @@ test("positive control still parses a real motion", () => {
   assert.equal(r.motions[0].result, "Carried");
   assert.equal(r.ready, true);
 });
+
+test("hint examples never name someone already on that motion", () => {
+  const r = check(`Motion to approve the September minutes. Moved by Dana Ruiz, seconded by Lee Park. Passed unanimously.
+Lee Park moved to accept the fence repair bid. Vote 5-1-0, carried.
+Motion by Priya Shah to raise the late fee to $25. Seconded by Omar Cole.
+Motion to adjourn. Seconded by Dana Ruiz. All in favor.`);
+  for (const m of r.motions) for (const g of m.gaps) {
+    const ex = (g.tip.match(/by ([A-Z][a-z]+ [A-Z][a-z]+)/) || [])[1];
+    if (ex) { assert.notEqual(ex, m.mover, g.tip); assert.notEqual(ex, m.seconder, g.tip); }
+  }
+  assert.equal(r.motions.reduce((n, m) => n + m.gaps.length, 0), 3);
+});
