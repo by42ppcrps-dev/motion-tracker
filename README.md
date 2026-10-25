@@ -1,7 +1,8 @@
 # Motion Tracker
 Paste board meeting notes; see every motion with its mover, seconder and vote, and what's missing before the minutes go out.
 
-**Live demo:** https://motion-tracker.lumegridai.workers.dev  (nothing you paste is stored)
+**Live demo:** https://motion-tracker.lumegridai.workers.dev  (nothing you paste is stored)  
+**Code:** https://github.com/by42ppcrps-dev/motion-tracker
 
 ## Run locally
 ```

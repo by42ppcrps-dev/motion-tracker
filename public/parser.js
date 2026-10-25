@@ -390,6 +390,7 @@ function displayText(s, body) {
   if (!w) w = after;
   if (!w) w = body.replace(/^\s*(?:RECOMMENDED\s+)?motion\s*(?:#\s*\d+\s*)?:?\s*/i, "").split(SENT)[0];
   w = (w || "").replace(/\s*\(?\b[Mm]\/[Ss]\b[\s\S]*$/, "").replace(/[:\s]+[^\s/]+\/[^\s/]+,?\s+(?:approved|carried|passed|failed|unan|\d{1,2}-\d)[\s\S]*$/, "").replace(/^\s*(?:[-•*]|\d+(?:\.\d+)*[.)]?)\s+/, "").replace(/^(?:to|that)\s+/i, "").replace(/\s*\([A-Z][^()]{0,40}[,/][^()]{0,40}\)\s*$/, "").replace(/\s+/g, " ").trim().replace(/[.,;:]$/, "");
+  w = w.replace(/^(?:the\s+)?(?:Board|Council|Commission|Committee|Association|District|City|Town|Village)\s+(?=(?:authorize|approve|adopt|accept|award|direct|enter|ratify|deny|reject|table|amend|appoint|purchase|hire|extend)\b)/, "");
   return w.length > 140 ? w.slice(0, 137).replace(/\s\S*$/, "") + "…" : w || "(motion)";
 }
 

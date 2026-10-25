@@ -26,5 +26,6 @@ test("narrow screens stack the results table into labeled cards", () => {
   const html = readFileSync(join(dirname(fileURLToPath(import.meta.url)), "../public/index.html"), "utf8");
   assert.match(html, /@media \(max-width:600px\)\{.*table\.mt td\{display:block.*table\.mt tr\.head\{display:none\}/);
   assert.match(html, /table\.mt td::before\{content:attr\(data-label\)/);
-  for (const l of ["Motion", "Moved", "Seconded", "Vote", "Result"]) assert.match(html, new RegExp(`data-label="${l}"`));
+  for (const l of ["Motion", "Moved", "Seconded", "Vote", "Result"]) assert.match(html, new RegExp(`data-label="${l}[" ]`));
+  assert.match(html, /td\.num,table\.mt td\.empty\{display:none\}/);
 });
