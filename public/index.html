@@ -48,8 +48,9 @@ function invalidate(){last=null;$("out").innerHTML="";$("copy").disabled=true;$(
 $("n").addEventListener("input",invalidate);
 $("sample").onclick=()=>{$("n").value=SAMPLE;run()};$("formal").onclick=()=>{$("n").value=FORMAL;run()};$("go").onclick=run;
 $("copy").onclick=async()=>{if(!last||!last.ready)return;await navigator.clipboard.writeText(last.summary);$("copy").textContent="Copied";setTimeout(()=>$("copy").textContent="Copy summary",1500)};
-async function run(){const r=await fetch("/api/check",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({notes:$("n").value})});
-const d=await r.json();if(d.error){last=null;$("copy").disabled=true;$("out").innerHTML=`<div class="banner no">${esc(d.error)}</div>`;return}last=d;
+async function get(notes){try{const r=await fetch("/api/check",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({notes})});if(r.ok||r.status===400||r.status===413)return await r.json()}catch(e){}
+const{check}=await import("/parser.js");return check(notes)}
+async function run(){const d=await get($("n").value);if(d.error){last=null;$("copy").disabled=true;$("out").innerHTML=`<div class="banner no">${esc(d.error)}</div>`;return}last=d;
 if(!d.motions.length){$("out").innerHTML=`<div class="banner no">No motions found. Start a motion with a phrase like “Motion to…”, “Moved by…” or “Dana Ruiz moved to…”.</div>`;$("copy").disabled=true;return}
 const n=d.motions.reduce((a,m)=>a+m.gaps.length,0)+(d.warnings||[]).length;
 const cell=(m,f,v)=>{const g=m.gaps.find(g=>g.field===f);return !g?esc(v):g.check?`${esc(v)} <span class="warn">⚠ check</span>`:`<span class="gap">missing</span>`};

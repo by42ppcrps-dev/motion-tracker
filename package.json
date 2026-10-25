@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "test": "node --test test/*.js",
+    "corpus": "node scripts/corpus.mjs --verbose",
     "dev": "wrangler dev",
     "deploy": "wrangler deploy"
   },
