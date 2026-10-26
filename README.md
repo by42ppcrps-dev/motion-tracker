@@ -1,7 +1,7 @@
 # Motion Tracker
 Paste board meeting notes; see every motion with its mover, seconder and vote, and what's missing before the minutes go out.
 
-**Live demo:** https://motion-tracker.lumegridai.workers.dev  (nothing you paste is stored)  
+**Live demo:** https://motion-tracker.trylumegrid.com  (nothing you paste is stored)  
 **Code:** https://github.com/by42ppcrps-dev/motion-tracker
 
 ## Run locally
@@ -22,6 +22,6 @@ It never says "Ready" when unsure. Lines that look like a motion but weren't rea
 `devpost/scope.md`, `devpost/prd.md`, `devpost/spec.md`. Skill pack installed with `npx skills add challengepost/learn-ai-basics --all -y` (in `.agents/skills/`).
 
 ## Disclosure
-Built during the submission period by LumeGrid with AI coding assistance. LICENSE file is copied from our own MIT template; no other pre-existing code. Sample notes are fictional.
+Built during the submission period by Matt Brady (LumeGrid). LICENSE file is copied from our own MIT template; no other pre-existing code. Sample notes are fictional.
 
 MIT License.

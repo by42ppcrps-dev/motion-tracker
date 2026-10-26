@@ -14,7 +14,7 @@ Paste → POST /api/check {notes} → `parseMotions()` → `findGaps()` → JSON
 JavaScript (ES modules), Cloudflare Workers + static assets (wrangler 4), Node test runner. Docs: https://developers.cloudflare.com/workers/ , https://nodejs.org/api/test.html
 
 ## Where It Runs and How Someone Tries It
-Live: https://motion-tracker.lumegridai.workers.dev . Local: `npm install && npx wrangler dev` then open http://localhost:8787 . Tests: `npm test`.
+Live: https://motion-tracker.trylumegrid.com . Local: `npm install && npx wrangler dev` then open http://localhost:8787 . Tests: `npm test`.
 
 ## Look and Feel
 Cream #faf6ec, ink #222, Georgia serif headings, red #b3261e for gaps, green #1e7a3c for ready.
