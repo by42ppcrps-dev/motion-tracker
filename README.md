@@ -16,7 +16,7 @@ npm test              # parser and UI tests
 It never says "Ready" when unsure. Lines that look like a motion but weren't read become warnings, and a vote bigger than the number present or a mover listed as absent gets a "check" flag.
 
 ## Accuracy
-`npm run corpus` (or `node scripts/corpus.mjs --verbose`) scores the parser on `test/corpus/minutes.json`: 46 excerpts from real public minutes (sources in the file), 8 constructed cases and 139 adversarial cases written without seeing the code. Current score: 193/193, zero false "Ready". The version before the rewrite scored 6/54 on the first corpus. On each fresh round of unseen cases the first-try score went 8/20, 8/20, 11/25, 10/25, 17/25, 23/25; every miss was fixed and added to the corpus.
+`npm run corpus` (or `node scripts/corpus.mjs --verbose`) scores the parser on `test/corpus/minutes.json`: 46 excerpts from real public minutes (sources in the file), 8 constructed cases and 139 adversarial cases (tricky phrasings meant to trip it up). Current score: 193/193, zero false "Ready". The version before the rewrite scored 6/54 on the first corpus. On each fresh round of unseen cases the first-try score went 8/20, 8/20, 11/25, 10/25, 17/25, 23/25; every miss was fixed and added to the corpus.
 
 ## Planning docs (Devpost Learn skill pack)
 `devpost/scope.md`, `devpost/prd.md`, `devpost/spec.md`. Skill pack installed with `npx skills add challengepost/learn-ai-basics --all -y` (in `.agents/skills/`).

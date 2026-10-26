@@ -62,7 +62,7 @@ Cloudflare Workers free plan only. No API keys, no paid calls.
 - **Pattern rules** instead of an AI model: free and explainable; an AI version would need keys and evals.
 
 ## Decisions and Open Issues
-Rule-based + no storage chosen by Matt's standing rules (no paid spend, synthetic data). Uncertainty: how varied real notes phrasing is. The first version was tested against one sample phrasing family plus negative cases; see the revision below for the 193-case set.
+Rule-based + no storage chosen up front (no paid spend, synthetic data). Uncertainty: how varied real notes phrasing is. The first version was tested against one sample phrasing family plus negative cases; see the revision below for the 193-case set.
 
 ### Revision, Oct 24 2026: formal minutes
 Problem: on real public minutes the first version scored 6 of 54 corpus cases (4 of 46 real excerpts) and said "Ready" 3 times when it shouldn't. Decision: rewrite the parser around formal phrasings and build a corpus (46 real public minutes excerpts, 8 constructed, plus adversarial rounds written without seeing the code). Policy: list motions in the order they appear; a withdrawn motion with mover and seconder needs no vote; a motion that dies for lack of a second is flagged with an explanation; "Motion carried" with no count is accepted as a vote; anonymous "moved and seconded" is flagged. Now 193/193 with zero false "Ready". First-try scores on each new unseen round went 8/20, 8/20, 11/25, 10/25, 17/25, 23/25. Known limit: a mover/seconder pair written as "sara m / jen k motion to..." in lowercase notes is not read; it is flagged rather than marked Ready.
